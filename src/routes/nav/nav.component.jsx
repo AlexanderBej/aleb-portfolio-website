@@ -46,7 +46,7 @@ const Nav = () => {
 					</NavLink>
 				</div>
 				<div className="toggle-container">
-					<button type="button" className="lang-btn" onClick={changeLanguage}>{i18n.language}</button>
+					<button type="button" className="lang-btn" onClick={changeLanguage}>{i18n.language.slice(0, 2)}</button>
 
 					<ThemeSwitcher />
 					<div className="dropdown">

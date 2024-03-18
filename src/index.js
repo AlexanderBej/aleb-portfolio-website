@@ -6,7 +6,7 @@ import { ParallaxProvider } from "react-scroll-parallax";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 
-import ThemeProvider from "./contexts/theme.provider";
+import { ThemeProvider } from "./contexts/theme.context";
 import "./utils/i18n";
 
 import "./index.css";

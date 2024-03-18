@@ -47,22 +47,22 @@
 
 // export { ThemeContext, ThemeProvider };
 
-import { useContext } from "react";
+// import { useContext } from "react";
 
-import ThemeContext from "../contexts/theme.context";
+// import ThemeContext from "../contexts/theme.context";
 
-export default function ThemeSetter() {
-  const { theme, setTheme } = useContext(ThemeContext);
+// export default function ThemeSetter() {
+//   const { theme, setTheme } = useContext(ThemeContext);
 
-  return (
-    <select value={theme} onChange={(e) => setTheme(e.currentTarget.value)}>
-      {themeOptions.map((option, idx) => (
-        <option value={option.value} key={idx}>
-          {option.value}
-        </option>
-      ))}
-    </select>
-  );
-}
+//   return (
+//     <select value={theme} onChange={(e) => setTheme(e.currentTarget.value)}>
+//       {themeOptions.map((option, idx) => (
+//         <option value={option.value} key={idx}>
+//           {option.value}
+//         </option>
+//       ))}
+//     </select>
+//   );
+// }
 
-const themeOptions = [{ value: "light" }, { value: "dark" }];
+// const themeOptions = [{ value: "light" }, { value: "dark" }];

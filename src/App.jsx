@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { Route, Routes } from "react-router-dom";
 
-import ThemeContext from "./contexts/theme.context";
+import { ThemeContext } from "./contexts/theme.context";
 
 import Nav from "./routes/nav/nav.component";
 import Home from "./routes/home/home.component";
@@ -16,17 +16,17 @@ function App() {
 	const { theme } = useContext(ThemeContext);
 
 	return (
-		<div className={`${theme} app-wrapper`}>
-			<Routes>
-				<Route path="/" element={<Nav />}>
-					<Route index element={<Home />} />
-					<Route path="about" element={<About />} />
-					<Route path="experience" element={<Experience />} />
-					<Route path="projects/*" element={<Projects />} />
-					<Route path="contact" element={<Contact />} />
-				</Route>
-			</Routes>
-		</div>
+		// <div className={`${theme} app-wrapper`}>
+		<Routes>
+			<Route path="/" element={<Nav />}>
+				<Route index element={<Home />} />
+				<Route path="about" element={<About />} />
+				<Route path="experience" element={<Experience />} />
+				<Route path="projects/*" element={<Projects />} />
+				<Route path="contact" element={<Contact />} />
+			</Route>
+		</Routes>
+		// </div>
 		// <div className={`whole-app ${theme}`}>
 		//   <div className="ripple-background">
 		//     <div className="circle xlarge"></div>

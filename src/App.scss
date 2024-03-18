@@ -1,18 +1,32 @@
 @import "../src/styles/variables";
 @import './styles/theme';
 
-.whole-app {
+// .whole-app {
+// 	margin: 0;
+// 	padding: 0;
+// 	box-sizing: border-box;
+// 	// background-color: $primary-color;
+// 	color: #95adcf;
+// 	font-family: "Montserrat", sans-serif;
+
+// 	@include themed() {
+// 		background-color: t('bg');
+// 	}
+// }
+
+body {
 	margin: 0;
 	padding: 0;
-	box-sizing: border-box;
-	// background-color: $primary-color;
-	color: #95adcf;
-	font-family: "Montserrat", sans-serif;
-
-	@include themed() {
-		background-color: t('bg');
-	}
+	// @include themed() {
+	// 	background-color: t('bg');
+	// 	color: t('text');
+	// }
+	background-color: var(--bkg-color);
+	color: var(--color);
+	font-family: "Lato", sans-serif;
+	overflow-x: hidden;
 }
+
 
 .skill-bubbles {
 	height: 100%;
@@ -25,17 +39,17 @@
 	.skill-chip {
 		padding: 20px;
 		font-size: 0.8em;
-		border: 2px solid $secondary-color;
+		border: 2px solid $primary-color;
 		border-radius: 20px;
-		background-color: $primary-color;
+		background-color: $background-color;
 		transition: all 0.2s ease-in-out;
 		min-width: 70px;
 		text-align: center;
 		cursor: pointer;
 
 		&:hover {
-			background-color: $secondary-color;
-			color: $primary-color;
+			background-color: $primary-color;
+			color: $secondary-color;
 		}
 	}
 }

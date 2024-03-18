@@ -98,6 +98,7 @@ input {
 	-webkit-appearance: none;
 	appearance: none;
 	transition: background-color var(--transDur) ease-in-out, box-shadow 0.15s ease-in-out, transform var(--transDur) ease-in-out;
+	cursor: pointer;
 }
 .theme-toggle:before {
 	background-color: hsl(48, 90%, 55%);

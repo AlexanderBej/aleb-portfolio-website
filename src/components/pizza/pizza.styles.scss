@@ -31,7 +31,7 @@ $pizza-size: 300px;
 		position: absolute;
 		width: $pizza-size;
 		height: $pizza-size;
-		background-color: $primary-color;
+		background-color: $background-color;
 		transform: rotate(45deg);
 		left: 70%;
 		z-index: 20;
