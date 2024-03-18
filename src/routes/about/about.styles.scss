@@ -1,0 +1,51 @@
+@import "../../styles/variables";
+
+.about-container {
+	padding: 100px;
+}
+
+.skills-container {
+	background-color: $aleb-black;
+	padding: 100px;
+	display: inline-flex;
+	align-items: flex-start;
+	width: 100%;
+	gap: 100px;
+
+	.skill-text {
+		width: 40%;
+		text-align: justify;
+
+        h1 {
+            margin-top: 0;
+        }
+	}
+
+    // .skill-bubbles {
+    //     height: 100%;
+    //     display: flex;
+    //     width: 50%;
+    //     flex-wrap: wrap;
+    //     gap: 30px;
+    //     justify-content: space-between;
+        
+    //     .skill-chip {
+    //         padding: 20px;
+    //         border: 2px solid $secondary-color;
+    //         border-radius: 20px;
+    //         background-color: $primary-color;
+    //     }
+    // }
+}
+
+.personal {
+	padding: 100px;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+
+    .personal-text {
+        width: 50%;
+        z-index: 999;
+    }
+}

@@ -1,0 +1,60 @@
+{
+    "home": {
+        "name": "numele meu e",
+        "alias": "dar sunt cunoscut și ca",
+        "work": "și sunt dezvoltator front-end, designer UX/UI și designer grafic",
+
+        "links": {
+            "home": "acasă",
+            "about": "despre",
+            "experience": "experiență",
+            "projects": "proiecte",
+            "contact": "contact"
+        },
+        "copyright": "Toate drepturile rezervate"
+    },
+    
+    "about": "Sunt un <strong>dezvoltator web</strong> și <strong>designer UX/UI</strong> pasionat din România (locuind în prezent în Spania), cu accent pe crearea de experiențe moderne și elegante pentru utilizatori. Scopul meu este să dau viață ideilor prin cod, asigurând o prezență online perfectă și captivantă. Cu un ochi aprofundat pentru design și o dragoste pentru codul curat, mă străduiesc să livrez soluții web care nu numai că îndeplinesc, dar depășesc așteptările.",
+
+    "experience": {
+        "rindus": {
+            "title": "dezvoltator front-end",
+            "description": "În calitatea mea de dezvoltator front-end, am jucat un rol esențial într-o echipă dinamică concentrată pe dezvoltarea de soluții inovatoare. În special, am contribuit în mod semnificativ la un instrument intern pentru o agenție germană de vânzare de spații publicitare de top, utilizând cele mai recente versiuni de Angular. Instrumentul nostru, vital pentru agenți, a folosit Google Maps pentru a vizualiza spațiile publicitare și pentru a eficientiza colectarea de informații, evaluările costurilor și procesele de vânzare către clienți. Responsabilitățile mele s-au extins dincolo de dezvoltarea front-end; De asemenea, am avut un rol principal în îmbunătățirea metodei de plată, optimizarea experienței utilizatorului și asigurarea tranzacțiilor fără întreruperi pentru clienții noștri. Acest rol cu mai multe fațete mi-a permis să prezint adaptabilitatea, competența tehnică și angajamentul de a oferi soluții de impact."
+        },
+        "conti_one": {
+            "title": "dezvoltator full-stack",
+            "description": "În rolul meu de dezvoltator full-stack, am condus dezvoltarea a patru instrumente interne, prezentând expertiză atât în tehnologiile frontend, cât și în cele de backend. Pe frontend, am lucrat exclusiv cu Angular (versiunile 8 până la 11), în timp ce backend-ul a fost implementat folosind Spring Boot 2, .NET Core și .NET Framework. Am jucat un rol central în proiectarea fiecărei aplicații, crearea de logo-uri și dezvoltarea ilustrațiilor aferente. Conducând unul dintre proiecte, m-am ocupat de colectarea cerințelor părților interesate, crearea sarcinilor și distribuirea eficientă a responsabilităților între membrii echipei, promovând colaborarea și asigurând livrarea cu succes a proiectelor."
+        },
+        "conti_two": {
+            "title": "dezvoltator software",
+            "description": "În calitate de dezvoltator de software, am jucat un rol esențial în crearea unui instrument intern de testare pentru codul încorporat pe microprocesoarele utilizate în componentele auto. Pluginul Eclipse, construit în principal cu Java și completat cu C++ și C#, a facilitat teste unitare, teste de instrumente funcționale și teste hardware, utilizând în principal CANoe. Responsabilitățile mele s-au extins la scrierea de teste C pentru evaluarea codului și crearea de pagini HTML pentru vizualizarea semnalului. Această experiență mi-a perfecționat abilitățile în dezvoltarea de software, metodologii de testare și colaborare într-un mediu cu ritm rapid."
+        },
+        "resume": {
+            "static_text": "Vezi CV-ul în întregime",
+            "link": "aici"
+        }
+    },
+
+    "projects": {
+        "aleb": {
+            "description": "„aleb” nu este doar un site web; este o reprezentare digitală a identității mele online. Creat cu un design atrăgător din punct de vedere vizual creat în Adobe Illustrator, site-ul servește ca un hub virtual pentru a-mi prezenta călătoria profesională. Folosind HTML, CSS și Vanilla JS, am construit cu meticulozitate o platformă care îmi evidențiază experiențele, proiectele și detaliile de contact. Designul, surprins în imagini vibrante, reflectă atât creativitatea, cât și funcționalitatea, oferind vizitatorilor o experiență captivantă în timp ce navighează prin prezența mea online.",
+            "date": "Ianuarie 2024"
+        },
+        "suna_dubios": {
+            "description": "Bine ați venit în lumea „Suna dubios?” - un joc de societate captivant, conceput pentru a provoca inteligența și capacitatea jucătorilor de a blufa. De la cărțile de trivia elaborate complex la cardurile de utilizator unice și cutia de joc elegantă, fiecare element al acestui joc este o dovadă a pasiunii mele pentru design și pentru jocuri de societate. Întrebările trivia, îngrijite cu grijă pentru a fi cele mai ciudate și amuzante fragmente de cunoștințe, adaugă o întorsătură încântătoare experienței de joc. Jucătorii trebuie să navigheze printr-o mare de fapte, unele însoțite de explicații interesante, adăugând un strat suplimentar de plăcere. Rămâneți pe fază pentru expansiuni și carduri bonus, promițând și mai multă emoție în viitorul apropiat.",
+            "date": "Noiembrie 2023",
+            "theme": "Design de joc de societate",
+            "chips": {
+                "trivia_cards": "Design unic de cărți de trivia",
+                "user_cards": "Carduri de utilizator implicate",
+                "box": "Design creativ cutie de joc",
+                "facts": "Fapte amuzante și explicații pe carduri trivia",
+                "expansion": "Expansiuni planificate și carduri bonus"
+            }
+        }
+    },
+
+    "contact": {
+        "social": "rețele de socializare"
+    }
+}

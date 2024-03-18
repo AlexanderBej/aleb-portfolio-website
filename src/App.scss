@@ -1,0 +1,161 @@
+@import "../src/styles/variables";
+@import './styles/theme';
+
+.whole-app {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	// background-color: $primary-color;
+	color: #95adcf;
+	font-family: "Montserrat", sans-serif;
+
+	@include themed() {
+		background-color: t('bg');
+	}
+}
+
+.skill-bubbles {
+	height: 100%;
+	display: flex;
+	width: 50%;
+	flex-wrap: wrap;
+	gap: 20px;
+	justify-content: flex-start;
+
+	.skill-chip {
+		padding: 20px;
+		font-size: 0.8em;
+		border: 2px solid $secondary-color;
+		border-radius: 20px;
+		background-color: $primary-color;
+		transition: all 0.2s ease-in-out;
+		min-width: 70px;
+		text-align: center;
+		cursor: pointer;
+
+		&:hover {
+			background-color: $secondary-color;
+			color: $primary-color;
+		}
+	}
+}
+
+.spaced-text {
+	line-height: 2em;
+	text-align: justify;
+}
+
+.sec-color {
+	color: $secondary-color;
+}
+
+.underline {
+	margin-bottom: 20px;
+	width: 10%;
+	height: 1px;
+	background-color: #92aecf42;
+}
+
+// .ripple-background {
+//   width: 100%;
+//   height: 100vh;
+//   display: grid;
+//   grid-template-columns: 1fr;
+//   justify-items: center;
+//   align-content: center;
+//   align-items: center;
+// }
+
+// .circle {
+//   grid-row-start: 1;
+//   grid-column-start: 1;
+//   border-radius: 50%;
+//   background: #95adcf0a;
+//   animation: ripple 15s infinite;
+//   -webkit-animation: ripple 15s infinite;
+//   box-shadow: 11px 6px 15px 0px #03142b;
+//   aspect-ratio: 1/1;
+// }
+
+// .border {
+//   position: fixed;
+//   z-index: 1;
+//   left: 40px;
+//   right: 40px;
+//   top: 40px;
+//   bottom: 40px;
+//   overflow: hidden;
+//   border: 1px solid #95adcf;
+// }
+
+// .vertical-lr {
+//   writing-mode: vertical-lr;
+//   font-size: 65px;
+//   rotate: 180deg;
+//   transition-duration: 0.9s !important;
+//   pointer-events: none;
+// }
+
+// @media (orientation: landscape) {
+//   .small {
+//     height: 20vh;
+//   }
+
+//   .medium {
+//     height: 40vh;
+//   }
+
+//   .large {
+//     height: 60vh;
+//   }
+
+//   .xlarge {
+//     height: 80vh;
+//   }
+// }
+
+// @media (orientation: portrait) {
+//   .small {
+//     width: 20vw;
+//   }
+
+//   .medium {
+//     width: 40vw;
+//   }
+
+//   .large {
+//     width: 60vw;
+//   }
+
+//   .xlarge {
+//     width: 80vw;
+//   }
+// }
+
+// @keyframes ripple {
+//   0% {
+//     scale: 0.8;
+//   }
+
+//   50% {
+//     scale: 1.2;
+//   }
+
+//   100% {
+//     scale: 0.8;
+//   }
+// }
+
+// @-webkit-keyframes ripple {
+//   0% {
+//     scale: 0.8;
+//   }
+
+//   50% {
+//     scale: 1.2;
+//   }
+
+//   100% {
+//     scale: 0.8;
+//   }
+// }

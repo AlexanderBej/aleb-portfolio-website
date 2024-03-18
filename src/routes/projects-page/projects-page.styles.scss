@@ -1,0 +1,60 @@
+@import '../../styles/variables';
+
+.projects-list {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    min-height: 100vh;
+
+    .proj-box {
+		width: 400px;
+		height: 250px;
+		overflow: hidden;
+		position: relative;
+		cursor: pointer;
+
+		.cover-img {
+			height: 100%;
+			width: 100%;
+            // background-image: attr(dataurl);
+			background-size: cover;
+			background-position: center;
+		}
+
+		// .mbd-img {
+		// 	background-image: url("../../assets/project-imgs/mbd/landing.PNG");
+		// }
+
+		// .drk-img {
+		// 	background-image: url("../../assets/project-imgs/drk-clothing/landing.PNG");
+		// }
+
+		// .gts-img {
+		// 	background-image: url("../../assets/project-imgs/gatsby-blog/landing.png");
+		// }
+
+		&::after {
+			content: attr(datatitle);
+			position: absolute;
+			background-color: aqua;
+			width: 100%;
+			height: 100%;
+			opacity: 0;
+			top: 0;
+			font-size: 2em;
+			color: $primary-color;
+			padding: 30px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+
+		&:hover::after {
+			opacity: 0.3;
+		}
+	}
+
+    .project-img {
+        width: 50%;
+    }
+}

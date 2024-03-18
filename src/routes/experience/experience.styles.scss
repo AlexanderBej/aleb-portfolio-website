@@ -1,0 +1,54 @@
+@import "../../styles/variables";
+
+.experience-container {
+	section {
+		overflow: hidden;
+	}
+}
+
+.tracker-bullets-container {
+	position: fixed;
+	right: 200px;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.rindus-section {
+	height: calc(100vh - 100px);
+}
+
+.experience-section {
+	height: 100vh;
+}
+
+.drk-section {
+	background-color: $aleb-black;
+}
+
+.experience-box {
+	width: 50%;
+	margin: auto;
+	display: flex;
+	height: 100%;
+	align-items: center;
+
+	.left-panel {
+		writing-mode: vertical-lr;
+		rotate: 180deg;
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+		flex-wrap: wrap;
+		align-content: center;
+		align-items: center;
+		margin-right: 50px;
+	}
+
+	.experience-skills {
+		width: 100%;
+
+		.skill-chip {
+			padding: 15px;
+		}
+	}
+}
