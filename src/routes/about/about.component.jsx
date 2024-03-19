@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-// import { useTranslation } from "react-i18next";
+import { useTranslation } from "react-i18next";
 import { useInView } from "framer-motion";
 import AOS from "aos";
 
@@ -12,7 +12,7 @@ const About = () => {
 	useEffect(() => {
 		AOS.init();
 	}, []);
-	// const { t } = useTranslation();
+	const { t } = useTranslation();
 
 	const aboutRef = useRef(null);
 	const skillsRef = useRef(null);
@@ -26,7 +26,8 @@ const About = () => {
 		<main className="main main-inline">
 			<article className="about-container" data-aos="fade-down">
 				<h1 ref={aboutRef}>
-					About <span className="sec-color">myself</span>
+					{t("about.myself.title.normal")}
+					<span className="sec-color">{t("about.myself.title.highlight")}</span>
 				</h1>
 				<div
 					className="underline"
@@ -35,18 +36,13 @@ const About = () => {
 						transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
 					}}
 				/>
-				<p className="spaced-text">
-					Hey there! 👋 I'm a super enthusiastic <strong>web wizard</strong> and <strong>design dazzler</strong> originally from Romania,
-					but currently soaking up the sun in Spain! 🌞 My jam? Crafting super sleek and modern user experiences that'll knock your socks
-					off! 💻✨ I'm all about bringing ideas to life through my trusty code keyboard, making sure your online presence is as smooth as
-					butter. With my knack for killer designs and an obsession with squeaky-clean code, I'm on a mission to whip up web solutions that
-					not only meet but totally blow your mind! 🚀🎨💥
-				</p>
+				<p className="spaced-text">{t("about.myself.text")}</p>
 			</article>
 			<article className="skills-container">
 				<div className="skill-text" data-aos="fade-right">
 					<h1 ref={skillsRef}>
-						Technical <span className="sec-color">skills</span>
+						{t("about.skills.title.normal")}
+						<span className="sec-color">{t("about.skills.title.highlight")}</span>
 					</h1>
 					<div
 						className="underline"
@@ -55,16 +51,8 @@ const About = () => {
 							transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
 						}}
 					/>
-					<p className="spaced-text">
-						Since 2019, I've been rocking the web developer scene, polishing up my skills in both frontend and backend wizardry. But wait,
-						there's more! For a hot minute now, I've been diving into the freelance world, wearing multiple hats as a graphic guru, UX/UI
-						extraordinaire, and frontend ninja.
-					</p>
-					<p className="spaced-text">
-						Now, let me spill the beans—frontend development has always been my groove. Why, you ask? Because it's where art and code
-						collide in the most magical way! It's like bringing a canvas to life with a sprinkle of coding magic, and let me tell you, it's
-						my happy place!{" "}
-					</p>
+					<p className="spaced-text">{t("about.skills.textOne")}</p>
+					<p className="spaced-text">{t("about.skills.textTwo")}</p>
 				</div>
 				<div className="skill-bubbles" data-aos="fade-left">
 					<span className="skill-chip">Javascript</span>
@@ -91,7 +79,8 @@ const About = () => {
 				<Pizza data-aos="fade-right" />
 				<div className="personal-text" data-aos="fade-left">
 					<h1 ref={pizzaRef}>
-						Quirky <span className="sec-color">Quips</span>
+						{t("about.quips.title.normal")}
+						<span className="sec-color">{t("about.quips.title.highlight")}</span>
 					</h1>
 					<div
 						className="underline"
@@ -100,11 +89,7 @@ const About = () => {
 							transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
 						}}
 					/>
-					<p className="spaced-text">
-						Aaaaand, for my personal side, I'm a nature nut, absolutely hooked on camping and hiking! 🏕️ But hey, I've got a cozy side
-						too—I'm a total couch potato and cinephile, always down for a binge-watching session of series and movies. 🎬 And let's not
-						forget my love affair with pizza... yup, you guessed it, I'm all about that cheesy goodness! 🍕
-					</p>
+					<p className="spaced-text">{t("about.quips.text")}</p>
 				</div>
 			</article>
 		</main>

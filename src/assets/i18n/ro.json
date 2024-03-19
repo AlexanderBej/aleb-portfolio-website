@@ -1,20 +1,88 @@
 {
-    "home": {
-        "name": "numele meu e",
-        "alias": "dar sunt cunoscut și ca",
-        "work": "și sunt dezvoltator front-end, designer UX/UI și designer grafic",
+    "navbar": {
+        "about": "despre",
+        "experience": "experiență",
+        "projects": "proiecte"
+    },
 
-        "links": {
-            "home": "acasă",
-            "about": "despre",
-            "experience": "experiență",
-            "projects": "proiecte",
-            "contact": "contact"
+    "home": {
+        "greeting": "Bună",
+        "name": "Sunt",
+        "whatIdo": "Transform linii de cod în pixeli de personalitate, pentru că până și site-urile web au nevoie de puțin fler",
+        "about": {
+            "title": {
+                "normal": "Cunoaște-",
+                "highlight": "mă"
+            },
+            "text": {
+                "partOne": "Sunt un",
+                "webDev": "dezvoltator web",
+                "and": "și",
+                "designer": "designer UX/UI",
+                "partTwo": "pasionat din România (locuind în prezent în Spania), cu accent pe crearea de experiențe moderne și elegante pentru utilizatori. Scopul meu este să dau viață ideilor prin cod, asigurând o prezență online perfectă și captivantă. Cu un ochi aprofundat pentru design și o dragoste pentru codul curat, mă străduiesc să livrez soluții web care nu numai că îndeplinesc, dar depășesc așteptările."
+            },
+            "button": "Citește mai multe"
+        },
+        "skillsTitle": {
+            "normal": "Câteva din ",
+            "highlight": "skill-urile mele"
+        },
+        "projects": {
+            "title": {
+                "normal": "Câteva din ",
+                "highlight": "proiectele mele"
+            },
+            "button": "Vezi mai multe"
+        },
+        "offers": {
+            "title": {
+                "normal": "Ce ",
+                "highlight": "ofer"
+            },
+            "front": {
+                "title": "Dezvoltare Frontend",
+                "text": "Creare de experiențe de utilizator fără întreruperi cu soluții web receptive, adaptate nevoilor dumneavoastră, asigurându-mă că funcționalitatea se întâlnește cu designul."
+            },
+            "ui": {
+                "title": "Design UX/UI",
+                "text": "Creșterea angajamentului utilizatorului prin interfețe intuitive și experiențe captivante ale utilizatorului, îmbinând estetica cu gradul de utilizare pentru un impact maxim."
+            },
+            "graphic": {
+                "title": "Design grafic",
+                "text": "De la logo-uri la materiale de marketing, dezlănțui design-uri uimitoare din punct de vedere vizual care comunică esența mărcii dumneavoastră și vă captivează publicul."
+            }
+        },
+        "contact":{
+            "social": "Rețelele de socializare",
+            "nav": "Navighează"
         },
         "copyright": "Toate drepturile rezervate"
     },
     
-    "about": "Sunt un <strong>dezvoltator web</strong> și <strong>designer UX/UI</strong> pasionat din România (locuind în prezent în Spania), cu accent pe crearea de experiențe moderne și elegante pentru utilizatori. Scopul meu este să dau viață ideilor prin cod, asigurând o prezență online perfectă și captivantă. Cu un ochi aprofundat pentru design și o dragoste pentru codul curat, mă străduiesc să livrez soluții web care nu numai că îndeplinesc, dar depășesc așteptările.",
+    "about": {
+        "myself": {
+            "title": {
+                "normal": "Despre ",
+                "highlight": "mine"
+            },
+            "text": "Hei acolo! 👋 Sunt un vrăjitor web super entuziast și un orbitor de design, originar din România, dar în prezent mă bucur de soare în Spania! 🌞 Gemul meu? Creați experiențe de utilizator super elegante și moderne, care vă vor da jos șosetele! 💻✨ Mă gândesc să dau viață ideilor prin intermediul tastaturii mele de încredere, asigurându-mă că prezența ta online este la fel de fluidă ca untul. Cu talentul meu pentru design-uri ucigașe și obsesia pentru codul care scârțâie, am misiunea de a crea soluții web care nu numai că se întâlnesc, dar îți surprind mintea! 🚀🎨💥"
+        },
+        "skills": {
+            "title": {
+                "normal": "Skill-uri ",
+                "highlight": "tehnice"
+            },
+            "textOne": "Din 2019, am zguduit scena dezvoltatorilor web, perfecționându-mi abilitățile atât în vrăjitorie frontend, cât și în backend. Dar stai, mai sunt! De un minut fierbinte, m-am scufundat în lumea freelance-ului, purtând mai multe pălării ca guru grafic, extraordinar UX/UI și ninja frontal.",
+            "textTwo": "Acum, permiteți-mi să vărs boabele de fasole - dezvoltarea front-end a fost întotdeauna groove-ul meu. De ce intrebi? Pentru că este locul în care arta și codul se ciocnesc în cel mai magic mod! Este ca și cum ai aduce o pânză la viață cu un strop de magie de codare și lasă-mă să-ți spun, este locul meu fericit!"
+        },
+        "quips": {
+            "title": {
+                "normal": "Batale ",
+                "highlight": "Ciudate"
+            },
+            "text": "Aaaa și, din punctul meu de vedere personal, sunt un nebun al naturii, absolut pasionat de camping și drumeții! 🏕️ Dar, hei, și eu am o latură confortabilă - sunt un cinefil și un cinefil, mereu pregătit pentru o sesiune de seriale și filme de vizionare excesivă. 🎬 Și să nu uităm de povestea mea de dragoste cu pizza... da, ai ghicit, sunt totul despre acea bunătate brânză! 🍕"
+        }
+    },
 
     "experience": {
         "rindus": {
@@ -36,25 +104,32 @@
     },
 
     "projects": {
-        "aleb": {
-            "description": "„aleb” nu este doar un site web; este o reprezentare digitală a identității mele online. Creat cu un design atrăgător din punct de vedere vizual creat în Adobe Illustrator, site-ul servește ca un hub virtual pentru a-mi prezenta călătoria profesională. Folosind HTML, CSS și Vanilla JS, am construit cu meticulozitate o platformă care îmi evidențiază experiențele, proiectele și detaliile de contact. Designul, surprins în imagini vibrante, reflectă atât creativitatea, cât și funcționalitatea, oferind vizitatorilor o experiență captivantă în timp ce navighează prin prezența mea online.",
-            "date": "Ianuarie 2024"
+        "mothers-birth-doula": {
+            "text": "Mother's Birth Doula este un site web cuprinzător care se adresează viitoarelor mame din New York, oferind sprijin și servicii esențiale. Cu o paletă liniștitoare dominată de nuanțe violet deschis, interfața de utilizare, realizată în întregime de designer, oferă o ambianță senină și primitoare. Site-ul web, construit folosind React și React Router, integrează perfect funcționalități precum un formular de contact alimentat de EmailJS, asigurând o comunicare eficientă. Prin ilustrații atente și elemente de design intuitive, Mother's Birth Doula stabilește un spațiu digital reconfortant, dând putere viitoarelor mame în călătoria lor către naștere.",
+            "short": "Un site web senin conceput cu nuanțe de violet deschis, oferind sprijin viitoarelor mame din New York. Construit cu integrarea React și EmailJS."
         },
-        "suna_dubios": {
-            "description": "Bine ați venit în lumea „Suna dubios?” - un joc de societate captivant, conceput pentru a provoca inteligența și capacitatea jucătorilor de a blufa. De la cărțile de trivia elaborate complex la cardurile de utilizator unice și cutia de joc elegantă, fiecare element al acestui joc este o dovadă a pasiunii mele pentru design și pentru jocuri de societate. Întrebările trivia, îngrijite cu grijă pentru a fi cele mai ciudate și amuzante fragmente de cunoștințe, adaugă o întorsătură încântătoare experienței de joc. Jucătorii trebuie să navigheze printr-o mare de fapte, unele însoțite de explicații interesante, adăugând un strat suplimentar de plăcere. Rămâneți pe fază pentru expansiuni și carduri bonus, promițând și mai multă emoție în viitorul apropiat.",
-            "date": "Noiembrie 2023",
-            "theme": "Design de joc de societate",
-            "chips": {
-                "trivia_cards": "Design unic de cărți de trivia",
-                "user_cards": "Carduri de utilizator implicate",
-                "box": "Design creativ cutie de joc",
-                "facts": "Fapte amuzante și explicații pe carduri trivia",
-                "expansion": "Expansiuni planificate și carduri bonus"
-            }
-        }
+        "drk-clothing": {
+            "text": "DRK Clothing reprezintă un proiect de portofoliu care arată abilitățile mele în crearea unei platforme de comerț electronic folosind tehnologii de ultimă oră. Construit cu React și Redux pentru o gestionare perfectă a stării, site-ul web se mândrește cu funcționalități solide, cum ar fi autentificarea Google și crearea contului cu e-mail și parolă. Folosind Firebase pentru autentificare și stocare de date și Stripe pentru plăți securizate cu cardul, DRK Clothing reprezintă o dovadă a stăpânirii mele asupra unei multitudini de tehnologii. În ciuda faptului că se confruntă cu o curbă de învățare abruptă, proiectul servește ca o dovadă a dăruirii și adaptabilității mele, depășind provocările pentru a oferi o experiență de comerț electronic rafinată și bogată în funcții.",
+            "short": "Un proiect de comerț electronic care demonstrează experiența în integrarea React, Redux, Firebase și Stripe pentru experiențe de cumpărături fără întreruperi și tranzacții sigure."
+        },
+        "gatsby-blog": {
+            "text": "Blogul Gatsby servește ca o mărturie a călătoriei mele în stăpânirea Gatsby.js, arătând experiența nouă în construirea de site-uri web extrem de rapide și extrem de personalizabile. Ca proiect de portofoliu, evidențiază dedicarea dezvoltatorului pentru învățarea continuă și îmbunătățirea dezvoltării web.",
+            "short": "Un proiect de portofoliu care demonstrează competența în Gatsby.js, prezentând un blog online minimalist și eficient."
+        },
+        "aleb": {
+            "text": "Vechiul meu portofoliu reprezintă o revitalizare a prezenței mele online, trecând de la o iterație învechită la o vitrină elegantă și modernă de abilități și proiecte. Creat cu Vanilla JS și CSS pur, site-ul web întruchipează competența mea în tehnologiile front-end. Interfața de utilizare, proiectată meticulos folosind Adobe Illustrator, reflectă ochiul meu aprofundat pentru estetică și atenția la detalii, rezultând o experiență captivantă din punct de vedere vizual și ușor de utilizat.",
+            "short": "Un site web de portofoliu reînnoit, care prezintă abilități și proiecte, conceput și dezvoltat de mine folosind Vanilla JS, CSS și Adobe Illustrator."
+        },
+        "suna-dubios": {
+            "text": "Sună Dubios este un joc de masă ingenios care adaugă o întorsătură jocului tradițional, provocând jucătorii să-i înșele pe alții cu minciuni plauzibile. Creat de dezvoltator, acest joc capricios prezintă întrebări care cuprind știință, istorie și cunoștințe generale, asigurând o experiență distractivă și stimulativă intelectuală. Cu un design captivant creat de dezvoltator, Sună Dubios promite ore întregi de râsete și înșelăciune prietenoasă, oferind o întorsătură unică a distracției clasice.",
+            "short": "Un joc trivia plin de spirit în care jucătorii trebuie să cacealmize pentru a ascunde răspunsurile corecte, cu întrebări capricioase pe diverse subiecte."
+        },
+        "live": "Site live"
     },
 
-    "contact": {
-        "social": "rețele de socializare"
+    "contactForm": {
+        "name": "Nume",
+        "message": "Mesaj",
+        "button": "Trimite-mi mesaj"
     }
 }

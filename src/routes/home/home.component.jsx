@@ -1,4 +1,4 @@
-import { useEffect, Fragment, useRef } from "react";
+import { useEffect, Fragment, useRef, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { useParallax } from "react-scroll-parallax";
@@ -32,6 +32,8 @@ import ContactForm from "../../components/contact/contact-form.component";
 import "./home.styles.scss";
 
 const Home = () => {
+	// const [loading, setLoading] = useState(true);
+
 	const parallax = useParallax({
 		speed: -15,
 	});
@@ -52,22 +54,45 @@ const Home = () => {
 		AOS.init();
 	}, []);
 
+	const onNavigateToMBDHandler = () => navigate("/projects/mothers-birth-doula");
+	const onNavigateToDRKHandler = () => navigate("/projects/drk-clothing");
+	const onNavigateToAlebHandler = () => navigate("/projects/aleb");
+
 	const onNavigateToProjectsHandler = () => navigate("/projects");
+	const onNavigateToAboutHandler = () => navigate("/about");
+
+	const mbdCover = "https://i.ibb.co/4gG8VRp/MBD-cover.png";
+	const drkCover = "https://i.ibb.co/Jq2dC7x/drk-cover.png";
+	const alebCover = "https://i.ibb.co/3d7psFx/aleb-cover.png";
+
+	// useEffect(() => {
+	// 	const handleLoad = () => {
+	// 		setLoading(false);
+	// 	};
+
+	// 	// Listen to the 'load' event on the window object
+	// 	window.addEventListener("load", handleLoad);
+
+	// 	// Clean up event listener to avoid memory leaks
+	// 	return () => window.removeEventListener("load", handleLoad);
+	// }, []);
 
 	return (
 		<Fragment>
 			<main className="main">
 				<section className="intro">
 					<div className="headshot" ref={parallax.ref}>
-						<img src={LowPoly} alt="Low Poly left face" data-aos="fade-right" />
-						<img src={RightFace} alt="Right headshot portrait" data-aos="fade-left" />
+						<img src={LowPoly} alt="Low Poly left face" data-aos="fade-right" data-aos-delay="500" />
+						<img src={RightFace} alt="Right headshot portrait" data-aos="fade-left" data-aos-delay="500" />
 					</div>
 
-					<h4>Hi,</h4>
-					<h1 className="my-name">
-						I am <span className="sec-color">Alex</span>
+					<h4 data-aos="fade-right">{t("home.greeting")},</h4>
+					<h1 className="my-name" data-aos="fade-right" data-aos-delay="100">
+						{t("home.name")} <span className="sec-color">Alex</span>
 					</h1>
-					<h2 className="what-I-do">I transform lines of code into pixels of personality, because even websites need a little flair</h2>
+					<h2 className="what-I-do" data-aos="fade-right" data-aos-delay="200">
+						{t("home.whatIdo")}
+					</h2>
 					<div className="social-icons">
 						<Link
 							data-aos="fade-right"
@@ -108,7 +133,8 @@ const Home = () => {
 				<section className="dark-bkg">
 					<article className="home-article home-section">
 						<h1 className="section-header" ref={aboutRef}>
-							Get to <span className="sec-color">know me</span>
+							{t("home.about.title.normal")}
+							<span className="sec-color">{t("home.about.title.highlight")}</span>
 						</h1>
 						<div
 							className="underline center-underline"
@@ -117,11 +143,18 @@ const Home = () => {
 								transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
 							}}
 						/>
-						<p className="spaced-text">{t("about")}</p>
+						<p className="spaced-text">
+							{t("home.about.text.partOne")} <strong>{t("home.about.text.webDev")}</strong> {t("home.about.text.and")}{" "}
+							<strong>{t("home.about.text.designer")}</strong> {t("home.about.text.partTwo")}
+						</p>
+						<Button type="button" onClick={onNavigateToAboutHandler}>
+							{t("home.about.button")}
+						</Button>
 					</article>
 					<article className="home-article home-section">
 						<h2 className="section-header" ref={skillsRef}>
-							Some of my <span className="sec-color">skills</span>
+							{t("home.skillsTitle.normal")}
+							<span className="sec-color">{t("home.skillsTitle.highlight")}</span>
 						</h2>
 						<div
 							className="underline center-underline"
@@ -167,7 +200,8 @@ const Home = () => {
 					</article>
 					<article className="home-section">
 						<h1 className="section-header" ref={projectsRef}>
-							Some of my <span className="sec-color">projects</span>
+							{t("home.projects.title.normal")}
+							<span className="sec-color">{t("home.projects.title.highlight")}</span>
 						</h1>
 						<div
 							className="underline center-underline"
@@ -177,30 +211,25 @@ const Home = () => {
 							}}
 						/>
 						<div className="projects-examples-container">
-							<div className="proj-box" datatitle="Mother's Birth Doula">
-								<Link to={"projects/mothers-birth-doula"}>
-									<div className="cover-img mbd-img" />
-								</Link>
+							<div className="proj-box" datatitle="Mother's Birth Doula" onClick={onNavigateToMBDHandler} data-aos="fade-down">
+								<div className="cover-img mbd-img" style={{ backgroundImage: `url(${mbdCover})` }} />
 							</div>
-							<div className="proj-box" datatitle="DRK Clothing">
-								<Link to={"projects/drk-clothing"}>
-									<div className="cover-img drk-img" />
-								</Link>
+							<div className="proj-box" datatitle="DRK Clothing" onClick={onNavigateToDRKHandler} data-aos="fade-down" data-aos-delay="150">
+								<div className="cover-img drk-img" style={{ backgroundImage: `url(${drkCover})` }} />
 							</div>
-							<div className="proj-box" datatitle="Blog">
-								<Link to={"projects/gatsby-blog"}>
-									<div className="cover-img gts-img" />
-								</Link>
+							<div className="proj-box" datatitle="aleb (old)" onClick={onNavigateToAlebHandler} data-aos="fade-down" data-aos-delay="300">
+								<div className="cover-img gts-img" style={{ backgroundImage: `url(${alebCover})` }} />
 							</div>
 						</div>
 						<Button type="button" onClick={onNavigateToProjectsHandler}>
-							Check out more
+							{t("home.projects.button")}
 						</Button>
 					</article>
 				</section>
 				<section className="home-section services-section">
 					<h1 className="section-header" ref={servicesRef}>
-						What I <span className="sec-color">offer</span>
+						{t("home.offers.title.normal")}
+						<span className="sec-color">{t("home.offers.title.highlight")}</span>
 					</h1>
 					<div
 						className="underline center-underline"
@@ -213,29 +242,20 @@ const Home = () => {
 						<div className="service-box" data-aos="fade-down">
 							<span className="service-number">01</span>
 							<img src={CodeIcon} alt="Code icon" className="service-icon" />
-							<h2>Frontend Development</h2>
-							<p className="spaced-text">
-								Crafting seamless user experiences with responsive web solutions tailored to your needs, ensuring functionality meets
-								design.
-							</p>
+							<h2>{t("home.offers.front.title")}</h2>
+							<p className="spaced-text">{t("home.offers.front.text")}</p>
 						</div>
 						<div className="service-box" data-aos="fade-down" data-aos-delay="150">
 							<span className="service-number">02</span>
 							<img src={UXIcon} alt="UX Design icon" className="service-icon" />
-							<h2>UI/UX Design</h2>
-							<p className="spaced-text">
-								Elevating user engagement through intuitive interfaces and captivating user experiences, blending aesthetics with usability
-								for maximum impact.
-							</p>
+							<h2>{t("home.offers.ui.title")}</h2>
+							<p className="spaced-text">{t("home.offers.ui.text")}</p>
 						</div>
 						<div className="service-box" data-aos="fade-down" data-aos-delay="300">
 							<span className="service-number">03</span>
 							<img src={GraphicIcon} alt="Graphic design icon" className="service-icon" />
-							<h2>Graphic design</h2>
-							<p className="spaced-text">
-								From logos to marketing materials, unleash visually stunning designs that communicate your brand's essence and captivate
-								your audience.
-							</p>
+							<h2>{t("home.offers.graphic.title")}</h2>
+							<p className="spaced-text">{t("home.offers.graphic.text")}</p>
 						</div>
 					</div>
 				</section>
@@ -243,38 +263,57 @@ const Home = () => {
 					<div className="footer-container">
 						<ContactForm />
 						<div className="social-contact">
-							<h2 className="mt0">Social media</h2>
-							<Link to={"https://www.facebook.com/abDoesDesign42/"} target="_blank" rel="noopener noreferrer" className="footer-link">
+							<h2 className="mt0">{t("home.contact.social")}</h2>
+							<Link
+								to={"https://www.facebook.com/abDoesDesign42/"}
+								target="_blank"
+								rel="noopener noreferrer"
+								className="footer-link"
+								data-aos="fade-right"
+								data-aos-delay="300">
 								Facebook
 							</Link>
-							<Link to={"https://www.instagram.com/alebdoesdesign/"} target="_blank" rel="noopener noreferrer" className="footer-link">
+							<Link
+								to={"https://www.instagram.com/alebdoesdesign/"}
+								target="_blank"
+								rel="noopener noreferrer"
+								className="footer-link"
+								data-aos="fade-right"
+								data-aos-delay="200">
 								Instagram
 							</Link>
 							<Link
 								to={"https://www.linkedin.com/in/alexandru-bej-203a72ab/"}
 								target="_blank"
 								rel="noopener noreferrer"
-								className="footer-link">
+								className="footer-link"
+								data-aos="fade-right"
+								data-aos-delay="100">
 								LinkedIn
 							</Link>
-							<Link to={"https://dribbble.com/alebX"} target="_blank" rel="noopener noreferrer" className="footer-link">
+							<Link
+								to={"https://dribbble.com/alebX"}
+								target="_blank"
+								rel="noopener noreferrer"
+								className="footer-link"
+								data-aos="fade-right">
 								Dribbble
 							</Link>
 						</div>
 						<article className="nav-tabs">
-							<h2 className="mt0">Navigate</h2>
-							<Link to={"about"} className="footer-link">
+							<h2 className="mt0">{t("home.contact.nav")}</h2>
+							<Link to={"about"} className="footer-link" data-aos="fade-right" data-aos-delay="200">
 								About
 							</Link>
-							<Link to={"experience"} className="footer-link">
+							<Link to={"experience"} className="footer-link" data-aos="fade-right" data-aos-delay="100">
 								Experience
 							</Link>
-							<Link to={"projects"} className="footer-link">
+							<Link to={"projects"} className="footer-link" data-aos="fade-right">
 								Projects
 							</Link>
 						</article>
 					</div>
-					<h6>&copy; 2024 Alexandru Bej. All rights reserved</h6>
+					<h6>&copy; 2024 Alexandru Bej. {t("home.copyright")}</h6>
 				</footer>
 			</main>
 		</Fragment>

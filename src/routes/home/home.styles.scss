@@ -134,18 +134,6 @@
 			background-position: center;
 		}
 
-		.mbd-img {
-			background-image: url("../../assets/project-imgs/mbd/landing.PNG");
-		}
-
-		.drk-img {
-			background-image: url("../../assets/project-imgs/drk-clothing/landing.PNG");
-		}
-
-		.gts-img {
-			background-image: url("../../assets/project-imgs/gatsby-blog/landing.png");
-		}
-
 		&::after {
 			content: attr(datatitle);
 			position: absolute;

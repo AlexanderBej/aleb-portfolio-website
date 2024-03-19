@@ -8,7 +8,7 @@ import ThemeSwitcher from "../../components/theme-switcher/theme-switcher.compon
 import "./nav.styles.scss";
 
 const Nav = () => {
-	const { i18n } = useTranslation();
+	const { t, i18n } = useTranslation();
 
 	const changeLanguage = () => {
 		if (i18n.language.includes("en")) {
@@ -26,17 +26,19 @@ const Nav = () => {
 				</Link>
 				<div className="nav-links">
 					<NavLink to={"about"} activeclassname="active">
-						about
+						{t("navbar.about")}
 					</NavLink>
 					<NavLink to={"experience"} activeclassname="active">
-						experience
+						{t("navbar.experience")}
 					</NavLink>
 					<NavLink to={"projects"} activeclassname="active">
-						projects
+						{t("navbar.projects")}
 					</NavLink>
 				</div>
 				<div className="toggle-container">
-					<button type="button" className="lang-btn" onClick={changeLanguage}>{i18n.language.slice(0, 2)}</button>
+					<button type="button" className="lang-btn" onClick={changeLanguage}>
+						{i18n.language.slice(0, 2)}
+					</button>
 
 					<ThemeSwitcher />
 					<div className="dropdown">

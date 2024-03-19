@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 import { projects } from "../../utils/projects";
 
@@ -18,21 +19,23 @@ const Project = () => {
 	const [project, setProject] = useState(defaultProject);
 	const id = useParams().id;
 
+	const { t } = useTranslation();
+
 	useEffect(() => {
 		const currentProject = projects.find((proj) => proj.url === id);
 		setProject(currentProject);
 	}, [id]);
 
-	const { name, imgs, text, technologies, website } = project;
+	const { name, imgs, technologies, website, url } = project;
 
 	return (
 		<div className="project-content">
 			<h1 className="project-title">{name}</h1>
-			<div className="spaced-text project-text">{text}</div>
+			<div className="spaced-text project-text">{t(`projects.${url}.text`)}</div>
 			{website && website.trim() !== "" ? (
 				<div className="project-link">
 					<Link to={website} target="_blank" rel="noopener noreferrer">
-						Live website
+						{t('projects.live')}
 					</Link>
 				</div>
 			) : null}
