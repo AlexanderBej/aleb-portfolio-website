@@ -1,7 +1,8 @@
+@import "../../styles/mixins";
+
 .spinner-overlay {
   width: 100%;
-  display: flex;
-  justify-content: center;
+  @include flex-just-center;
   align-items: center;
 
   .spinner-container {

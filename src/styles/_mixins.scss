@@ -1,0 +1,20 @@
+@mixin inline-flex-center {
+	display: inline-flex;
+	align-items: center;
+}
+
+@mixin flex-just-center {
+    display: flex;
+	justify-content: center;
+}
+
+@mixin flex-align-center {
+    display: flex;
+	align-items: center;
+}
+
+@mixin shrinkLabel {
+	top: -14px;
+	font-size: 0.7em;
+	color: $secondary-color;
+}

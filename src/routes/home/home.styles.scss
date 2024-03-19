@@ -1,7 +1,8 @@
 @import "../../styles/variables";
 @import "../../styles/theme";
+@import "../../styles/mixins";
 
-.intro {
+.intro-section {
 	height: calc(100vh - 200px);
 	padding: 100px 100px 0;
 	position: relative;
@@ -98,9 +99,8 @@
 	gap: 80px 150px;
 
 	.skill-box {
-		display: flex;
+		@include flex-align-center;
 		flex-direction: column;
-		align-items: center;
 
 		.skill-logo {
 			height: 90px;
@@ -115,8 +115,7 @@
 }
 
 .projects-examples-container {
-	display: flex;
-	justify-content: center;
+	@include flex-just-center;
 	gap: 10px;
 
 	.proj-box {
@@ -125,7 +124,7 @@
 		overflow: hidden;
 		position: relative;
 		cursor: pointer;
-		border-radius: 5px;
+		border-radius: $border-radius;
 
 		.cover-img {
 			height: 100%;
@@ -136,6 +135,7 @@
 
 		&::after {
 			content: attr(datatitle);
+			@include flex-just-center;
 			position: absolute;
 			background-color: rgba(146, 174, 207, 0.5);
 			width: 100%;
@@ -143,11 +143,9 @@
 			opacity: 0;
 			top: 0;
 			font-size: 2em;
-			color: #15191e;
+			color: $background-color;
 			padding: 30px;
-			display: flex;
 			align-items: center;
-			justify-content: center;
 			font-family: "Roboto";
 			font-weight: 600;
 			font-size: 2em;
@@ -171,7 +169,7 @@
 	.service-box {
 		width: 375px;
 		background-color: var(--bkg-dark-color);
-		border-radius: 5px;
+		border-radius: $border-radius;
 		padding: 25px 25px 20px;
 		position: relative;
 		margin-top: 20px;
@@ -261,14 +259,4 @@ footer {
 		font-size: 0.7em;
 		margin-bottom: 0;
 	}
-}
-
-@mixin inline-flex-center {
-	display: inline-flex;
-	align-items: center;
-}
-
-@mixin flex-column {
-	display: flex;
-	flex-direction: column;
 }

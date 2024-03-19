@@ -45,7 +45,7 @@ const Project = () => {
 					transition: "all 0.9s ease-in-out",
 				}}
 			/>
-			<div className="spaced-text project-text">{t(`projects.${url}.text`)}</div>
+			{url && <div className="spaced-text project-text">{t(`projects.${url}.text`)}</div>}
 			{website && website.trim() !== "" ? (
 				<div className="project-link">
 					<Link to={website} target="_blank" rel="noopener noreferrer">
@@ -54,13 +54,14 @@ const Project = () => {
 				</div>
 			) : null}
 			<div className="skill-bubbles project-bubbles">
-				{technologies && technologies.map((technology) => {
-					return (
-						<div key={technology} className="skill-chip">
-							{technology}
-						</div>
-					);
-				})}
+				{technologies &&
+					technologies.map((technology) => {
+						return (
+							<div key={technology} className="skill-chip">
+								{technology}
+							</div>
+						);
+					})}
 			</div>
 			<ImgGallery imgs={imgs} />
 		</div>

@@ -1,9 +1,7 @@
-import './mobile-menu.styles.scss';
+import "./mobile-menu.styles.scss";
 
 const MobileMenu = () => {
-    return (
-        <div></div>
-    )
-}
+	return <div></div>;
+};
 
 export default MobileMenu;

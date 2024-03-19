@@ -1,4 +1,5 @@
 @import "../../styles/variables";
+@import "../../styles/mixins";
 
 .projects-list {
 	display: flex;
@@ -15,18 +16,18 @@
 	}
 
 	.image-box {
+		@include flex-just-center;
 		width: 100%;
 		height: 250px;
 		overflow: hidden;
 		position: relative;
-		border-radius: 5px;
-		display: flex;
-		justify-content: center;
+		border-radius: $border-radius;
+		
 
 		.cover-img {
 			height: 100%;
 			width: auto;
-			border-radius: 5px;
+			border-radius: $border-radius;
 		}
 	}
 

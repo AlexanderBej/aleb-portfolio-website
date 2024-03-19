@@ -10,7 +10,7 @@ button {
 
 .aleb-btn {
     padding: 15px 20px;
-    border-radius: 5px;
+    border-radius: $border-radius;
     background-color: var(--bkg-color);
     border: 1px solid $primary-color;
     color: var(--aleb-white);

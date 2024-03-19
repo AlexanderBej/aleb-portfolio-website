@@ -1,5 +1,6 @@
 @import "../../styles/variables";
 @import "../../styles/theme";
+@import "../../styles/mixins";
 
 .navbar {
 	width: 100%;
@@ -21,16 +22,6 @@
 			color: $primary-color;
 		}
 	}
-}
-
-@mixin flex-column {
-	display: flex;
-	flex-direction: column;
-}
-
-@mixin inline-flex-center {
-	display: inline-flex;
-	align-items: center;
 }
 
 .aleb-logo {

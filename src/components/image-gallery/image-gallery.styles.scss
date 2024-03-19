@@ -2,7 +2,7 @@
 @import "../../styles/variables";
 
 .image-gallery-slides {
-    border-radius: 5px;
+    border-radius: $border-radius;
 }
 
 .image-gallery-thumbnail.active, .image-gallery-thumbnail:focus {
