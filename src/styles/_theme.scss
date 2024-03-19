@@ -3,6 +3,7 @@
 
 html[data-theme="dark"] {
 	--bkg-color: #15191e;
+	--bkg-dark-color: #101316;
 	--color: #ebefff;
   
 	// --primary-color: #{$primary-500};
@@ -14,6 +15,7 @@ html[data-theme="dark"] {
   
   html[data-theme="light"] {
 	--bkg-color: #ebefff;
+	--bkg-dark-color: #e5e9f5;
 	--color: #15191e;
   
 	// --primary-color: #{$blue-1};

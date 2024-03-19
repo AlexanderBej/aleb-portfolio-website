@@ -5,10 +5,13 @@
     flex-wrap: wrap;
     width: 100%;
     min-height: 100vh;
+	justify-content: space-between;
+    padding: 100px;
+	gap: 20px;
 
     .proj-box {
-		width: 400px;
-		height: 250px;
+		width: 450px;
+		height: 300px;
 		overflow: hidden;
 		position: relative;
 		cursor: pointer;

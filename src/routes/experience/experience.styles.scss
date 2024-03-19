@@ -1,4 +1,5 @@
 @import "../../styles/variables";
+@import '../../styles/theme';
 
 .experience-container {
 	section {
@@ -22,7 +23,7 @@
 }
 
 .drk-section {
-	background-color: $aleb-black;
+	background-color: var(--bkg-dark-color);
 }
 
 .experience-box {

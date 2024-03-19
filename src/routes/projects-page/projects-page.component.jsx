@@ -1,24 +1,16 @@
-import { useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-
-import { projects } from "../../utils/projects";
 
 import MBDCover from "../../assets/project-imgs/mbd/landing.PNG";
 import DRKCover from "../../assets/project-imgs/drk-clothing/landing.PNG";
 import BlogCover from "../../assets/project-imgs/gatsby-blog/landing.png";
 import AlebCover from "../../assets/project-imgs/aleb/home_page_1080.PNG";
-import SunaDubiosCover from "../../assets/project-imgs/suna-dubios/SD_box.jpg";
+import SunaDubiosCover from "../../assets/project-imgs/suna-dubios/SD_on-the-table.jpg";
 
 import "./projects-page.styles.scss";
 
 const ProjectsPage = () => {
 	const { t } = useTranslation();
-
-	const imgHomeRoute = "../../assets/project-imgs";
-
-	const mbdroute = "/mbd/landing.PNG";
-	const drkroute = "/drk-clothing/landing.PNG";
 
 	const handleProjectIndex = (number) => {
 		const numToString = (number + 1).toString();
@@ -31,45 +23,24 @@ const ProjectsPage = () => {
 		navigate(`/projects/${projectURL}`);
 	};
 
+	const onNavigateToMBDHandler = () => navigate("projects/mothers-birth-doula");
+
 	return (
 		<main className="projects-list">
-			<div className="proj-box" datatitle="Mother's Birth Doula">
-				<Link to={"mothers-birth-doula"}>
-					<img src={require("../../assets/project-imgs/mbd/landing.PNG").default} alt="Mother's Birth Doula" style={{ display: "none" }} />
-					<div className="cover-img" dataurl="../../assets/project-imgs/mbd/landing.PNG" style={{ backgroundImage: `url(${MBDCover})` }} />
-				</Link>
+			<div className="proj-box" datatitle="Mother's Birth Doula" onClick={onNavigateToMBDHandler}>
+				<div className="cover-img" style={{ backgroundImage: `url(${MBDCover})` }} />
 			</div>
 			<div className="proj-box" datatitle="DRK Clothing">
-				<Link to={"drk-clothing"}>
-					<div
-						className="cover-img"
-						dataurl="../../assets/project-imgs/drk-clothing/landing.PNG"
-						style={{ backgroundImage: `url(${imgHomeRoute}/drk-clothing/landing.PNG)` }}
-					/>
-				</Link>
+				<div className="cover-img" style={{ backgroundImage: `url(${DRKCover})` }} />
 			</div>
 			<div className="proj-box" datatitle="Gatsby Blog">
-				<Link to={"gatsby-blog"}>
-					<div
-						className="cover-img"
-						dataurl="../../assets/project-imgs/gatsby-blog/landing.png"
-						style={{ backgroundImage: `url(${imgHomeRoute}/gatsby-blog/landing.png)` }}
-					/>
-				</Link>
+				<div className="cover-img" style={{ backgroundImage: `url(${BlogCover})` }} />
 			</div>
 			<div className="proj-box" datatitle="aleb (old)">
-				<Link to={"aleb"}>
-					<div
-						className="cover-img"
-						dataurl="../../assets/project-imgs/aleb/home_page_1080.PNG"
-						style={{ backgroundImage: `url(${imgHomeRoute}/aleb/home_page_1080.PNG)` }}
-					/>
-				</Link>
+				<div className="cover-img" style={{ backgroundImage: `url(${AlebCover})` }} />
 			</div>
 			<div className="proj-box" datatitle="Suna dubios">
-				<Link to={"suna-dubios"}>
-					<div className="cover-img" style={{ backgroundImage: `url(${imgHomeRoute}/suna-dubios/SD_on-the-table.jpg)` }} />
-				</Link>
+				<div className="cover-img" style={{ backgroundImage: `url(${SunaDubiosCover})` }} />
 			</div>
 			{/*<img
 				onClick={() => handleProjectNavigation("mothers-birth-doula")}

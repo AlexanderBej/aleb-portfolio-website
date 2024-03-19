@@ -1,6 +1,7 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
 import { useParallax } from "react-scroll-parallax";
+import { useInView } from "framer-motion";
 import AOS from "aos";
 
 import Sidebar from "../../components/sidebar/sidebar.component";
@@ -29,19 +30,34 @@ const Experience = () => {
 		speed: -20,
 	});
 
+	const rindusRef = useRef(null);
+	const contiOneRef = useRef(null);
+	const contiTwoRef = useRef(null);
+
+	const isRindusInView = useInView(rindusRef, { once: true });
+	const isContiOneInView = useInView(contiOneRef, { once: true });
+	const isContiTwoInView = useInView(contiTwoRef, { once: true });
+
 	return (
 		<main className="experience-container">
 			<aside className="tracker-bullets-container">
 				<Sidebar />
 			</aside>
 			<section className="rindus-section" id="section1">
-				<article className="experience-box" ref={parallaxBox1.ref} >
+				<article className="experience-box" ref={parallaxBox1.ref}>
 					<div className="left-panel" data-aos="fade-left">
 						<span>rindus technology</span>
 						<span className="year">2022 - 2023</span>
 					</div>
 					<div className="main-panel" data-aos="fade-left">
-						<h3>{t("experience.rindus.title")}</h3>
+						<h3 ref={rindusRef}>{t("experience.rindus.title")}</h3>
+						<div
+							className="underline"
+							style={{
+								width: isRindusInView ? "100%" : "10%",
+								transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
+							}}
+						/>
 						<p className="spaced-text">{t("experience.rindus.description")}</p>
 						<div className="skill-bubbles experience-skills">
 							<span className="skill-chip">Angular</span>
@@ -64,13 +80,20 @@ const Experience = () => {
 			</section>
 
 			<section className="experience-section drk-section" id="section2">
-				<article className="experience-box" ref={parallaxBox2.ref} >
+				<article className="experience-box" ref={parallaxBox2.ref}>
 					<div className="left-panel" data-aos="fade-right">
 						<span>Continental Romania</span>
 						<span className="year">2019 - 2022</span>
 					</div>
 					<div className="main-panel" data-aos="fade-right">
-						<h3>{t("experience.conti_one.title")}</h3>
+						<h3 ref={contiOneRef}>{t("experience.conti_one.title")}</h3>
+						<div
+							className="underline"
+							style={{
+								width: isContiOneInView ? "100%" : "10%",
+								transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
+							}}
+						/>
 						<p className="spaced-text">{t("experience.conti_one.description")}</p>
 						<div className="skill-bubbles experience-skills">
 							<span className="skill-chip">Angular</span>
@@ -95,13 +118,20 @@ const Experience = () => {
 			</section>
 
 			<section className="experience-section" id="section3">
-				<article className="experience-box" ref={parallaxBox3.ref} >
+				<article className="experience-box" ref={parallaxBox3.ref}>
 					<div className="left-panel" data-aos="fade-left">
 						<span>Continental Romania</span>
 						<span className="year">2018 - 2019</span>
 					</div>
 					<div className="main-panel" data-aos="fade-left">
-						<h3>{t("experience.conti_two.title")}</h3>
+						<h3 ref={contiTwoRef}>{t("experience.conti_two.title")}</h3>
+						<div
+							className="underline"
+							style={{
+								width: isContiTwoInView ? "100%" : "10%",
+								transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
+							}}
+						/>
 						<p className="spaced-text">{t("experience.conti_two.description")}</p>
 						<div className="skill-bubbles experience-skills">
 							<span className="skill-chip">Java 8</span>
@@ -115,7 +145,7 @@ const Experience = () => {
 				</article>
 			</section>
 			<section className="experience-section drk-section" id="section4">
-				<article className="experience-box" ref={parallaxBox4.ref} >
+				<article className="experience-box" ref={parallaxBox4.ref}>
 					<p className="resume-text" data-aos="fade-right">
 						<span className="resume-static-text">{t("experience.resume.static_text")}</span>
 						<a href="https://alexanderbej.github.io/cv/" title="Resume" target="_blank" rel="noreferrer">

@@ -10,6 +10,7 @@ import { ThemeProvider } from "./contexts/theme.context";
 import "./utils/i18n";
 
 import "./index.css";
+import ScrollToTop from "./utils/scroll-to-top";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -17,6 +18,7 @@ root.render(
 		<ParallaxProvider>
 			<ThemeProvider>
 				<BrowserRouter>
+					<ScrollToTop />
 					<App />
 				</BrowserRouter>
 			</ThemeProvider>

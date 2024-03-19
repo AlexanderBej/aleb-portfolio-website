@@ -1,19 +1,19 @@
-import { useContext } from "react";
+// import { useContext } from "react";
 import { Route, Routes } from "react-router-dom";
 
-import { ThemeContext } from "./contexts/theme.context";
+// import { ThemeContext } from "./contexts/theme.context";
+import ScrollToTop from "./utils/scroll-to-top";
 
 import Nav from "./routes/nav/nav.component";
 import Home from "./routes/home/home.component";
 import About from "./routes/about/about.component";
 import Experience from "./routes/experience/experience.component";
 import Projects from "./routes/projects/projects.component";
-import Contact from "./routes/contact/contact.component";
 
 import "./App.scss";
 
 function App() {
-	const { theme } = useContext(ThemeContext);
+	// const { theme } = useContext(ThemeContext);
 
 	return (
 		// <div className={`${theme} app-wrapper`}>
@@ -23,7 +23,6 @@ function App() {
 				<Route path="about" element={<About />} />
 				<Route path="experience" element={<Experience />} />
 				<Route path="projects/*" element={<Projects />} />
-				<Route path="contact" element={<Contact />} />
 			</Route>
 		</Routes>
 		// </div>

@@ -41,9 +41,6 @@ const Nav = () => {
 					<NavLink to={"projects"} activeclassname="active">
 						projects
 					</NavLink>
-					<NavLink to={"contact"} activeclassname="active">
-						contact
-					</NavLink>
 				</div>
 				<div className="toggle-container">
 					<button type="button" className="lang-btn" onClick={changeLanguage}>{i18n.language.slice(0, 2)}</button>
