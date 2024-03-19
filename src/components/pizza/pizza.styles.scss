@@ -1,4 +1,5 @@
 @import "../../styles/variables";
+@import "../../styles/theme";
 
 $pizza-outline: #dd8126;
 $pizza-border: orange;
@@ -31,7 +32,7 @@ $pizza-size: 300px;
 		position: absolute;
 		width: $pizza-size;
 		height: $pizza-size;
-		background-color: $background-color;
+		background-color: var(--bkg-color);
 		transform: rotate(45deg);
 		left: 70%;
 		z-index: 20;

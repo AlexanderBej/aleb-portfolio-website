@@ -1,4 +1,4 @@
-import { useEffect, Fragment, useRef, useState } from "react";
+import { useEffect, Fragment, useRef } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { useParallax } from "react-scroll-parallax";
@@ -32,8 +32,6 @@ import ContactForm from "../../components/contact/contact-form.component";
 import "./home.styles.scss";
 
 const Home = () => {
-	// const [loading, setLoading] = useState(true);
-
 	const parallax = useParallax({
 		speed: -15,
 	});
@@ -64,18 +62,6 @@ const Home = () => {
 	const mbdCover = "https://i.ibb.co/4gG8VRp/MBD-cover.png";
 	const drkCover = "https://i.ibb.co/Jq2dC7x/drk-cover.png";
 	const alebCover = "https://i.ibb.co/3d7psFx/aleb-cover.png";
-
-	// useEffect(() => {
-	// 	const handleLoad = () => {
-	// 		setLoading(false);
-	// 	};
-
-	// 	// Listen to the 'load' event on the window object
-	// 	window.addEventListener("load", handleLoad);
-
-	// 	// Clean up event listener to avoid memory leaks
-	// 	return () => window.removeEventListener("load", handleLoad);
-	// }, []);
 
 	return (
 		<Fragment>

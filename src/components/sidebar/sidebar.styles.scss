@@ -1,4 +1,5 @@
 @import "../../styles/variables";
+@import "../../styles/theme";
 
 .sidebar {
 	display: flex;
@@ -16,8 +17,9 @@
 	}
 
 	.tracker-line {
-		border-left: 1px solid #ffffff40;
+		border-left: 1px solid var(--aleb-white);
 		height: 25px;
+		opacity: 0.25;
 	}
 
 	.active {
