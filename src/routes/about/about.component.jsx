@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import { useTranslation } from "react-i18next";
+// import { useTranslation } from "react-i18next";
 import { useInView } from "framer-motion";
 import AOS from "aos";
 
@@ -12,7 +12,7 @@ const About = () => {
 	useEffect(() => {
 		AOS.init();
 	}, []);
-	const { t } = useTranslation();
+	// const { t } = useTranslation();
 
 	const aboutRef = useRef(null);
 	const skillsRef = useRef(null);

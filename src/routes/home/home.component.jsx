@@ -243,7 +243,7 @@ const Home = () => {
 					<div className="footer-container">
 						<ContactForm />
 						<div className="social-contact">
-							<h2>Social media</h2>
+							<h2 className="mt0">Social media</h2>
 							<Link to={"https://www.facebook.com/abDoesDesign42/"} target="_blank" rel="noopener noreferrer" className="footer-link">
 								Facebook
 							</Link>
@@ -262,7 +262,7 @@ const Home = () => {
 							</Link>
 						</div>
 						<article className="nav-tabs">
-							<h2>Navigate</h2>
+							<h2 className="mt0">Navigate</h2>
 							<Link to={"about"} className="footer-link">
 								About
 							</Link>

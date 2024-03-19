@@ -1,4 +1,4 @@
-@import '../../styles/variables';
+@import "../../styles/variables";
 
 $pizza-outline: #dd8126;
 $pizza-border: orange;
@@ -37,18 +37,6 @@ $pizza-size: 300px;
 		z-index: 20;
 	}
 
-	// &:after {
-	// 	content: "";
-	// 	position: absolute;
-	// 	width: 10px;
-	// 	height: 50px;
-	// 	background-color: $pizza-bg-color;
-	// 	border-radius: 0 0 10px 10px;
-	// 	box-shadow: 15px -10px $pizza-bg-color;
-	// 	transform: translateX(3px) translateY(-1px);
-	// 	animation: chorreo 4s ease-out infinite;
-	// }
-
 	.basil {
 		position: absolute;
 		width: $pizza-size;
@@ -63,9 +51,9 @@ $pizza-size: 300px;
 			background-color: $basil-color;
 			z-index: 13;
 			border-radius: 100px 0;
-			box-shadow: 50px 100px $basil-color, 150px 120px $basil-color, 130px 40px $basil-color, 200px 250px $basil-color, 250px 300px $basil-color,
-				300px 100px $basil-color, 350px 200px $basil-color, 35px 280px $basil-color, 150px 320px $basil-color, 130px 40px $basil-color,
-				100px 200px $basil-color, 250px 60px $basil-color, 230px 160px $basil-color;
+			box-shadow: 50px 100px $basil-color, 150px 120px $basil-color, 130px 40px $basil-color, 200px 250px $basil-color,
+				250px 300px $basil-color, 300px 100px $basil-color, 350px 200px $basil-color, 35px 280px $basil-color, 150px 320px $basil-color,
+				130px 40px $basil-color, 100px 200px $basil-color, 250px 60px $basil-color, 230px 160px $basil-color;
 		}
 	}
 
@@ -137,7 +125,7 @@ $pizza-size: 300px;
 }
 
 @keyframes chorreo {
-    50% {
-        height: 100px;
-    }
+	50% {
+		height: 100px;
+	}
 }

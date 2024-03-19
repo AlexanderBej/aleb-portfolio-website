@@ -8,11 +8,9 @@ import ThemeSwitcher from "../../components/theme-switcher/theme-switcher.compon
 import "./nav.styles.scss";
 
 const Nav = () => {
-	// const { theme, toggleTheme } = useContext(ThemeContext);
 	const { i18n } = useTranslation();
 
 	const changeLanguage = () => {
-		console.log(i18n.language);
 		if (i18n.language.includes("en")) {
 			i18n.changeLanguage("ro");
 		} else {
@@ -20,11 +18,6 @@ const Nav = () => {
 		}
 	};
 
-	// const handleChange = (e) => {
-	// 	console.log(e.target.checked);
-	// 	console.log(theme);
-	// 	toggleTheme();
-	// };
 	return (
 		<Fragment>
 			<nav className="navbar">

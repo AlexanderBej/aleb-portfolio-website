@@ -1,5 +1,6 @@
 import { useRef, useState } from "react";
-import { useTranslation } from "react-i18next";
+// import { useTranslation } from "react-i18next";
+import { useInView } from "framer-motion";
 
 import FormInput from "../form-input/form-input.component";
 import Button from "../button/button.component";
@@ -13,12 +14,20 @@ const defaultFormFields = {
 };
 
 const ContactForm = () => {
-	const { t } = useTranslation();
+	// const { t } = useTranslation();
 	const form = useRef();
 	const [formFields, setFormFields] = useState(defaultFormFields);
 	const [loading, setLoading] = useState(false);
 
 	const { name, email, message } = formFields;
+
+	const nameRef = useRef(null);
+	const emailRef = useRef(null);
+	const messageRef = useRef(null);
+
+	const isNameInView = useInView(nameRef, { once: true });
+	const isEmailInView = useInView(emailRef, { once: true });
+	const isMessageInView = useInView(messageRef, { once: true });
 
 	// const sendEmail = () => {
 	// 	const serviceId = process.env.REACT_APP_EMAILJS_EMAIL_SERVICE_ID;
@@ -60,22 +69,43 @@ const ContactForm = () => {
 
 	return (
 		<div className="contact-form">
-		<h1>Write me a message</h1>
+			<h1 className="mt0">Write me a <span className="sec-color">message</span></h1>
 			<form ref={form} onSubmit={handleSubmit}>
-				<FormInput label="Name" type="text" inputType={"input"} onChange={handleChange} name="name" required value={name} />
+				<div
+					ref={nameRef}
+					style={{
+						width: isNameInView ? "100%" : "10%",
+						transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
+					}}>
+					<FormInput label="Name" type="text" inputType={"input"} onChange={handleChange} name="name" required value={name} />
+				</div>
 
-				<FormInput
-					label="Email"
-					type="text"
-					inputMode="email"
-					inputType={"input"}
-					onChange={handleChange}
-					name="email"
-					required
-					value={email}
-				/>
+				<div
+					ref={emailRef}
+					style={{
+						width: isEmailInView ? "100%" : "20%",
+						transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
+					}}>
+					<FormInput
+						label="Email"
+						type="text"
+						inputMode="email"
+						inputType={"input"}
+						onChange={handleChange}
+						name="email"
+						required
+						value={email}
+					/>
+				</div>
 
-				<FormInput label="Message" type="text" inputType={"textarea"} onChange={handleChange} required name="message" value={message} />
+				<div
+					ref={messageRef}
+					style={{
+						width: isMessageInView ? "100%" : "30%",
+						transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
+					}}>
+					<FormInput label="Message" type="text" inputType={"textarea"} onChange={handleChange} required name="message" value={message} />
+				</div>
 
 				<div className="btns-container">
 					<Button isLoading={loading} type="submit" customClassName="message-me-btn">

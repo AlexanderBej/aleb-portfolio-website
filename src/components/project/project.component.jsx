@@ -1,52 +1,51 @@
 import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 import { projects } from "../../utils/projects";
-import getImageURL from "../../utils/image";
 
-import image1 from '../../assets/project-imgs/aleb/home_page_1080.PNG';
-import image2 from '../../assets/project-imgs/aleb/about_page_1080.PNG';
-import image3 from '../../assets/project-imgs/aleb/full_design.PNG';
-import image4 from '../../assets/project-imgs/aleb/mobile_dark.PNG';
-import image5 from '../../assets/project-imgs/aleb/mobile_light.PNG';
+import ImgGallery from "../image-gallery/image-gallery.component";
 
+import "./project.styles.scss";
 
 const defaultProject = {
-	name: '',
+	name: "",
 	imgs: [],
-	text: '',
-	technologies: []
-}
+	text: "",
+	technologies: [],
+};
 
 const Project = () => {
-	const { category } = useParams();
-	console.log(category)
-	// const [imgs, setImgs] = useState([]);
-	// const [text, setText] = useState("");
-
 	const [project, setProject] = useState(defaultProject);
 	const id = useParams().id;
 
-	const images= [image1, image2, image3, image4, image5]
-	
-
 	useEffect(() => {
 		const currentProject = projects.find((proj) => proj.url === id);
-		// setImgs(currentProject.imgs);
-		// setText(currentProject.text);
-		console.log(currentProject)
 		setProject(currentProject);
 	}, [id]);
 
-	const { name, imgs, text, technologies } = project;
+	const { name, imgs, text, technologies, website } = project;
 
 	return (
-		<div className="content">
-			<div className="page-title">{name}</div>
-			<div className="project-text">{text}</div>
-			{images.map((value, index) => {
-				return <img key={index} className="project-img" src={value} alt={value} />;
-			})}
+		<div className="project-content">
+			<h1 className="project-title">{name}</h1>
+			<div className="spaced-text project-text">{text}</div>
+			{website && website.trim() !== "" ? (
+				<div className="project-link">
+					<Link to={website} target="_blank" rel="noopener noreferrer">
+						Live website
+					</Link>
+				</div>
+			) : null}
+			<div className="skill-bubbles project-bubbles">
+				{technologies.map((technology) => {
+					return (
+						<div key={technology} className="skill-chip">
+							{technology}
+						</div>
+					);
+				})}
+			</div>
+			<ImgGallery imgs={imgs} />
 		</div>
 	);
 };

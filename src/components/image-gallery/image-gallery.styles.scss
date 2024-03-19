@@ -1,0 +1,22 @@
+@import "~react-image-gallery/styles/scss/image-gallery.scss";
+@import "../../styles/variables";
+
+.image-gallery-slides {
+    border-radius: 5px;
+}
+
+.image-gallery-thumbnail.active, .image-gallery-thumbnail:focus {
+    border-color: $primary-color;
+}
+
+.image-gallery-thumbnail:hover {
+    border-color: $primary-color;
+}
+
+.image-gallery-icon {
+    color: $aleb-white;
+
+    &:hover {
+        color: $primary-color;
+    }
+}
