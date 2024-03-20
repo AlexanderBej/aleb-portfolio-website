@@ -7,6 +7,7 @@ import Experience from "./routes/experience/experience.component";
 import Projects from "./routes/projects/projects.component";
 
 import "./App.scss";
+import NotFound from "./routes/not-found/not-found.component";
 
 function App() {
 	return (
@@ -16,6 +17,7 @@ function App() {
 				<Route path="about" element={<About />} />
 				<Route path="experience" element={<Experience />} />
 				<Route path="projects/*" element={<Projects />} />
+				<Route path="*" element={<NotFound />} />
 			</Route>
 		</Routes>
 	);

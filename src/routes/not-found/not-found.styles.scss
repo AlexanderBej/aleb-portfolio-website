@@ -1,0 +1,46 @@
+@import "../../styles/variables";
+
+.not-found-page {
+	text-align: center;
+
+	h2 {
+		margin-bottom: 2em;
+	}
+
+	.image-box {
+		position: relative;
+
+		.not-found-img {
+			z-index: -1;
+			height: 100px;
+			position: absolute;
+			top: -20px;
+			left: 50%;
+			transform: translateX(-20px);
+		}
+
+		.not-found-header {
+			color: $primary-color;
+			font-size: 20em;
+			margin: 0;
+		}
+	}
+}
+
+@media screen and (max-width: 700px) {
+	.not-found-page {
+
+        h2 {
+            font-size: 3em;
+        }
+		.image-box {
+			.not-found-img {
+				top: -50px;
+			}
+
+			.not-found-header {
+				font-size: 12em;
+			}
+		}
+	}
+}
