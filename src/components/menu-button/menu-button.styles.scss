@@ -47,3 +47,24 @@
 		display: block;
 	}
 }
+
+@media screen and (max-width: 450px) {
+	.dropdown-btn {
+		width: 100%;
+		height: 30px;
+
+		.bar {
+			width: 35px;
+		}
+	}
+
+	.change {
+		.bar1 {
+			transform: translate(0, 12px) rotate(-45deg);
+		}
+
+		.bar3 {
+			transform: translate(0, -13px) rotate(45deg);
+		}
+	}
+}

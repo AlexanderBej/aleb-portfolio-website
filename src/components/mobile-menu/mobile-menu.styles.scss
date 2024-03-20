@@ -1,9 +1,10 @@
 @import "../../styles/variables";
+@import "../../styles/theme";
 
 .mobile-menu {
 	width: 110px;
 	position: absolute;
-	background: transparent;
+	background: var(--bkg-color);
 	height: 0;
 	top: 100px;
 	right: 20px;

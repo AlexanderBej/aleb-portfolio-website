@@ -1,4 +1,3 @@
-
 :root {
 	--hue: 223;
 	--bg: hsl(var(--hue), 10%, 100%);
@@ -23,7 +22,6 @@ input {
 	transition: transform var(--transDur) ease-in-out;
 }
 
-
 .theme-icon,
 .theme-toggle {
 	z-index: 1;
@@ -34,8 +32,8 @@ input {
 }
 .theme-icon {
 	display: block;
-    top: 14px;
-    left: 16px;
+	top: 14px;
+	left: 16px;
 	width: 15px;
 	height: 15px;
 }
@@ -166,5 +164,33 @@ input {
 	}
 	.theme-toggle:focus-visible {
 		box-shadow: 0 0 0 0.125em var(--primary);
+	}
+}
+
+@media screen and (max-width: 450px) {
+	.theme-toggle {
+		width: 70px;
+		height: 30px;
+
+		&::before {
+			height: 22px;
+			width: 22px;
+		}
+	}
+
+	.theme-icon {
+		top: 12px;
+		left: 14px;
+		width: 10px;
+		height: 10px;
+	}
+
+	.theme-icon-part {
+		width: 10px;
+		height: 10px;
+	}
+
+	.theme-toggle:checked ~ .theme-icon .theme-icon-part:nth-child(1) {
+		box-shadow: 2px -2px 0 2px hsl(0, 0%, 100%) inset;
 	}
 }

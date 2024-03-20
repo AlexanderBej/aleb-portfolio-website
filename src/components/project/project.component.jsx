@@ -34,7 +34,7 @@ const Project = () => {
 	const { name, imgs, technologies, website, url } = project;
 
 	return (
-		<div className="project-content">
+		<div className="project-content p100">
 			<h1 className="project-title" ref={projectRef}>
 				{name}
 			</h1>

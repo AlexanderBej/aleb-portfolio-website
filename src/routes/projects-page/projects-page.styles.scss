@@ -7,7 +7,7 @@
 	width: 100%;
 	min-height: 100vh;
 	justify-content: space-between;
-	padding: 100px;
+	// padding: 100px;
 	gap: 20px 10px;
 
 	.proj-box {
@@ -22,7 +22,6 @@
 		overflow: hidden;
 		position: relative;
 		border-radius: $border-radius;
-		
 
 		.cover-img {
 			height: 100%;
@@ -33,5 +32,11 @@
 
 	.project-img {
 		width: 50%;
+	}
+}
+
+@media screen and (max-width: 890px) {
+	.projects-list {
+		justify-content: center;
 	}
 }

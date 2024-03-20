@@ -24,7 +24,7 @@ const About = () => {
 
 	return (
 		<main className="main main-inline">
-			<article className="about-container" data-aos="fade-down">
+			<article className="about-container p100" data-aos="fade-down">
 				<h1 ref={aboutRef}>
 					{t("about.myself.title.normal")}
 					<span className="sec-color">{t("about.myself.title.highlight")}</span>
@@ -38,7 +38,7 @@ const About = () => {
 				/>
 				<p className="spaced-text">{t("about.myself.text")}</p>
 			</article>
-			<article className="skills-container">
+			<article className="skills-container p100">
 				<div className="skill-text" data-aos="fade-right">
 					<h1 ref={skillsRef}>
 						{t("about.skills.title.normal")}
@@ -75,7 +75,7 @@ const About = () => {
 					<span className="skill-chip">Github</span>
 				</div>
 			</article>
-			<article className="personal">
+			<article className="personal p100">
 				<Pizza data-aos="fade-right" />
 				<div className="personal-text" data-aos="fade-left">
 					<h1 ref={pizzaRef}>

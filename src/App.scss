@@ -63,3 +63,19 @@ a {
 .mt0 {
 	margin-top: 0;
 }
+
+.p100 {
+	padding: 100px;
+}
+
+@media screen and (max-width: 1400px) {
+	.p100 {
+		padding: 100px 50px;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.p100 {
+		padding: 80px 20px;
+	}
+}

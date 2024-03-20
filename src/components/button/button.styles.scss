@@ -1,57 +1,59 @@
-@import '../../styles/variables';
-@import '../../styles/theme';
+@import "../../styles/variables";
+@import "../../styles/theme";
 
 $bkg-size: -5px;
 
 button {
-    border: unset;
-    outline: unset;
+	border: unset;
+	outline: unset;
 }
 
 .aleb-btn {
-    padding: 15px 20px;
-    border-radius: $border-radius;
-    background-color: var(--bkg-color);
-    border: 1px solid $primary-color;
-    color: var(--aleb-white);
-    position: relative;
-    cursor: pointer;
-    margin: 20px auto;
-    display: block;
-    transition: all 0.3s ease;
-    
-    &::before, &::after {
-        transition: all 0.3s ease;
-        content: "";
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        background-color: $primary-color;
-        z-index: -1;
-    }
+	padding: 15px 20px;
+	min-width: 120px;
+	border-radius: $border-radius;
+	background-color: var(--bkg-color);
+	border: 1px solid $primary-color;
+	color: var(--aleb-white);
+	position: relative;
+	cursor: pointer;
+	margin: 20px auto;
+	display: block;
+	transition: all 0.3s ease;
 
-    &::before {
-        top: $bkg-size;
-        left: $bkg-size;
-    }
+	&::before,
+	&::after {
+		transition: all 0.3s ease;
+		content: "";
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background-color: $primary-color;
+		z-index: -1;
+	}
 
-    &::after {
-        bottom: $bkg-size;
-        right: $bkg-size;
-    }
+	&::before {
+		top: $bkg-size;
+		left: $bkg-size;
+	}
 
-    &:hover {
-        color: var(--bkg-color);
-        background-color: $primary-color;
-        
-        &::before {
-            top: 0;
-            left: 0;;
-        }
+	&::after {
+		bottom: $bkg-size;
+		right: $bkg-size;
+	}
 
-        &::after {
-            bottom: 0;
-            right: 0;
-        }
-    }
+	&:hover {
+		color: var(--bkg-color);
+		background-color: $primary-color;
+
+		&::before {
+			top: 0;
+			left: 0;
+		}
+
+		&::after {
+			bottom: 0;
+			right: 0;
+		}
+	}
 }

@@ -20,7 +20,7 @@ const ProjectsPage = () => {
 	const onNavigateToProjectHandler = (url) => navigate(url);
 
 	return (
-		<main className="projects-list">
+		<main className="projects-list p100">
 			{projects.map(({ id, url, name, cover }) => {
 				return (
 					<div className="proj-box" key={id}>

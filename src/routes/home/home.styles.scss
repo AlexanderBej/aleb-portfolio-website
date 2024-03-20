@@ -72,7 +72,7 @@
 			font-size: 6em;
 			text-shadow: 0 0 1px $primary-color, 0 0 2px $primary-color;
 			color: var(--bkg-color);
-			opacity: 0.3;
+			opacity: 0.6;
 			flex: 1;
 		}
 
@@ -84,7 +84,7 @@
 
 .dark-bkg {
 	background-color: var(--bkg-dark-color);
-	padding: 100px;
+	// padding: 100px;
 	position: relative;
 	z-index: 2;
 }
@@ -117,6 +117,7 @@
 .projects-examples-container {
 	@include flex-just-center;
 	gap: 10px;
+	flex-wrap: wrap;
 
 	.proj-box {
 		width: 400px;
@@ -196,15 +197,14 @@
 
 		h2 {
 			text-align: center;
-			opacity: 0.5;
+			opacity: 0.7;
 			font-weight: 100;
+			color: $primary-color;
 		}
 	}
 }
 
 .contact-section {
-	padding: 100px;
-
 	.contact-btn {
 		margin: 20px auto;
 	}
@@ -224,7 +224,6 @@
 
 .home-section {
 	position: relative;
-	padding: 100px;
 }
 
 .section-header {
@@ -242,16 +241,22 @@ footer {
 		width: 100%;
 		justify-content: space-between;
 
-		.nav-tabs,
-		.social-contact {
-			width: 20%;
+		.footer-links {
 			display: flex;
-			flex-direction: column;
-			align-items: flex-start;
-			gap: 30px;
+			width: 40%;
+			gap: 40px;
 
-			.footer-link:hover {
-				color: $primary-color;
+			.nav-tabs,
+			.social-contact {
+				// width: 20%;
+				display: flex;
+				flex-direction: column;
+				align-items: flex-start;
+				gap: 30px;
+
+				.footer-link:hover {
+					color: $primary-color;
+				}
 			}
 		}
 	}
@@ -262,14 +267,9 @@ footer {
 	}
 }
 
-
 @media screen and (max-width: 1400px) {
 	.intro-section {
 		padding: 100px 50px 0;
-	}
-
-	.dark-bkg, .contact-section, .home-section {
-		padding: 100px 50px;
 	}
 
 	footer {
@@ -292,7 +292,7 @@ footer {
 		.titles .bkg-text {
 			font-size: 4em;
 		}
-	} 
+	}
 
 	.skills-short-container {
 		gap: 80px;
@@ -328,6 +328,7 @@ footer {
 
 @media screen and (max-width: 750px) {
 	.intro-section {
+		overflow-x: hidden;
 		.what-I-do {
 			width: 80%;
 		}
@@ -335,13 +336,48 @@ footer {
 		.my-name {
 			font-size: 3em;
 		}
-	} 
+	}
 
 	.projects-examples-container .proj-box {
 		height: 150px;
 	}
 
-	footer .footer-container .social-contact {
-		width: 25%;
+	footer .footer-container {
+		flex-direction: column;
+
+		.footer-links {
+			margin: 50px 0;
+			justify-content: space-between;
+			width: 100%;
+		}
+	}
+
+	.social-title {
+		font-size: 1.2em;
+	}
+}
+
+@media screen and (max-width: 450px) {
+	.intro-section {
+		padding: 80px 20px 0;
+		.titles {
+			bottom: 30px;
+
+			.bkg-text {
+				font-size: 2em;
+			}
+		}
+		.what-I-do {
+			width: 100%;
+		}
+
+		.headshot {
+			height: calc(100% - 200px);
+		}
+	}
+
+	.skills-short-container {
+		justify-content: center;
+		gap: 60px;
 	}
 }

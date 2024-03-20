@@ -47,76 +47,7 @@
 
 .toggle-container {
 	@include inline-flex-center;
-	// position: relative;
 }
-
-// .dropdown-btn {
-// 	@include flex-column;
-// 	padding: 0;
-// 	border: none;
-// 	width: 50px;
-// 	height: 40px;
-// 	cursor: pointer;
-// 	justify-content: space-between;
-// }
-
-// .dropdown-btn div {
-// 	@include aleb-border;
-// 	width: 45px;
-// 	height: 5px;
-// 	border-radius: 5px;
-// }
-
-// .dropdown-btn:hover div,
-// .dropdown-btn:focus div {
-// 	background-color: $secondary-color;
-// }
-
-// .dropdown {
-// 	position: relative;
-// }
-
-// .dropdown-content {
-// 	visibility: hidden;
-// 	opacity: 0;
-// 	transition: visibility 0s, opacity 0.5s ease-in-out;
-// 	position: absolute;
-// 	background-color: transparent;
-// 	min-width: 135px;
-// 	overflow: auto;
-// 	right: 0;
-
-// 	a {
-// 		@include aleb-border;
-// 		padding: 8px 16px;
-// 		display: block;
-// 		margin: 10px 0;
-// 		border-radius: 25px;
-// 		background-color: $primary-color;
-
-// 		&:hover {
-// 			background-color: $secondary-color;
-// 			color: $primary-color;
-// 		}
-// 	}
-// }
-
-// .show {
-// 	visibility: visible;
-// 	opacity: 1;
-// }
-
-// .change .bar1 {
-// 	transform: translate(0, 15px) rotate(-45deg);
-// }
-
-// .change .bar2 {
-// 	opacity: 0;
-// }
-
-// .change .bar3 {
-// 	transform: translate(0, -15px) rotate(45deg);
-// }
 
 @media screen and (max-width: 1400px) {
 	.navbar {
@@ -131,5 +62,21 @@
 
 	.navbar .nav-links {
 		display: none;
+	}
+}
+
+@media screen and (max-width: 450px) {
+	.navbar {
+		padding: 10px 20px;
+	}
+
+	.lang-btn {
+		height: 30px;
+		width: 30px;
+		border-width: 1px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-size: 0.7em;
 	}
 }

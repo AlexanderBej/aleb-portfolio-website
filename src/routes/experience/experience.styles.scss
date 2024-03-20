@@ -1,5 +1,5 @@
 @import "../../styles/variables";
-@import '../../styles/theme';
+@import "../../styles/theme";
 @import "../../styles/mixins";
 
 .experience-container {
@@ -16,11 +16,11 @@
 }
 
 .rindus-section {
-	height: calc(100vh - 100px);
+	min-height: calc(100vh - 100px);
 }
 
 .experience-section {
-	height: 100vh;
+	min-height: 100vh;
 }
 
 .drk-section {
@@ -50,5 +50,67 @@
 		.skill-chip {
 			padding: 15px;
 		}
+	}
+}
+
+@media screen and (max-width: 1000px) {
+	.tracker-bullets-container {
+		right: 100px;
+	}
+
+	.experience-box {
+		width: 70%;
+	}
+}
+
+@media screen and (max-width: 870px) {
+	.tracker-bullets-container {
+		right: 50px;
+	}
+
+	.experience-box {
+		width: 80%;
+	}
+}
+
+@media screen and (max-width: 700px) {
+	.experience-container {
+		section {
+			padding: 50px 10px;
+		}
+	}
+
+	.tracker-bullets-container {
+		right: 10px;
+	}
+
+	.experience-box {
+		width: 95%;
+		margin-left: 0;
+		flex-direction: column;
+		justify-content: center;
+
+		.left-panel {
+			align-items: center;
+			writing-mode: unset;
+			rotate: unset;
+			height: unset;
+			margin-right: 0;
+		}
+	}
+
+	.skill-bubble {
+		height: unset;
+		align-content: flex-start;
+
+		.skill-chip {
+			height: fit-content;
+		}
+	}
+}
+
+@media screen and (max-width: 700px) {
+	.experience-container section {
+		margin-top: 70px;
 	}
 }

@@ -115,8 +115,8 @@ const Home = () => {
 					<h3 className="dev bkg-text">&lt;frontend dev&gt;</h3>
 				</div>
 			</section>
-			<section className="dark-bkg">
-				<article className="home-section">
+			<section className="dark-bkg p100">
+				<article className="home-section p100">
 					<h1 className="section-header" ref={aboutRef}>
 						{t("home.about.title.normal")}
 						<span className="sec-color">{t("home.about.title.highlight")}</span>
@@ -136,7 +136,7 @@ const Home = () => {
 						{t("home.about.button")}
 					</Button>
 				</article>
-				<article className="home-section">
+				<article className="home-section p100">
 					<h1 className="section-header" ref={skillsRef}>
 						{t("home.skillsTitle.normal")}
 						<span className="sec-color">{t("home.skillsTitle.highlight")}</span>
@@ -183,7 +183,7 @@ const Home = () => {
 						</div>
 					</div>
 				</article>
-				<article className="home-section">
+				<article className="home-section p100">
 					<h1 className="section-header" ref={projectsRef}>
 						{t("home.projects.title.normal")}
 						<span className="sec-color">{t("home.projects.title.highlight")}</span>
@@ -211,7 +211,7 @@ const Home = () => {
 					</Button>
 				</article>
 			</section>
-			<section className="home-section services-section">
+			<section className="home-section services-section p100">
 				<h1 className="section-header" ref={servicesRef}>
 					{t("home.offers.title.normal")}
 					<span className="sec-color">{t("home.offers.title.highlight")}</span>
@@ -247,51 +247,58 @@ const Home = () => {
 			<footer>
 				<div className="footer-container">
 					<ContactForm />
-					<div className="social-contact">
-						<h2 className="mt0">{t("home.contact.social")}</h2>
-						<Link
-							to={"https://www.facebook.com/abDoesDesign42/"}
-							target="_blank"
-							rel="noopener noreferrer"
-							className="footer-link"
-							data-aos="fade-right"
-							data-aos-delay="300">
-							Facebook
-						</Link>
-						<Link
-							to={"https://www.instagram.com/alebdoesdesign/"}
-							target="_blank"
-							rel="noopener noreferrer"
-							className="footer-link"
-							data-aos="fade-right"
-							data-aos-delay="200">
-							Instagram
-						</Link>
-						<Link
-							to={"https://www.linkedin.com/in/alexandru-bej-203a72ab/"}
-							target="_blank"
-							rel="noopener noreferrer"
-							className="footer-link"
-							data-aos="fade-right"
-							data-aos-delay="100">
-							LinkedIn
-						</Link>
-						<Link to={"https://dribbble.com/alebX"} target="_blank" rel="noopener noreferrer" className="footer-link" data-aos="fade-right">
-							Dribbble
-						</Link>
+					<div className="footer-links">
+						<article className="social-contact">
+							<h2 className="mt0 social-title">{t("home.contact.social")}</h2>
+							<Link
+								to={"https://www.facebook.com/abDoesDesign42/"}
+								target="_blank"
+								rel="noopener noreferrer"
+								className="footer-link"
+								data-aos="fade-right"
+								data-aos-delay="300">
+								Facebook
+							</Link>
+							<Link
+								to={"https://www.instagram.com/alebdoesdesign/"}
+								target="_blank"
+								rel="noopener noreferrer"
+								className="footer-link"
+								data-aos="fade-right"
+								data-aos-delay="200">
+								Instagram
+							</Link>
+							<Link
+								to={"https://www.linkedin.com/in/alexandru-bej-203a72ab/"}
+								target="_blank"
+								rel="noopener noreferrer"
+								className="footer-link"
+								data-aos="fade-right"
+								data-aos-delay="100">
+								LinkedIn
+							</Link>
+							<Link
+								to={"https://dribbble.com/alebX"}
+								target="_blank"
+								rel="noopener noreferrer"
+								className="footer-link"
+								data-aos="fade-right">
+								Dribbble
+							</Link>
+						</article>
+						<article className="nav-tabs">
+							<h2 className="mt0 social-title">{t("home.contact.nav")}</h2>
+							<Link to={"about"} className="footer-link" data-aos="fade-right" data-aos-delay="200">
+								About
+							</Link>
+							<Link to={"experience"} className="footer-link" data-aos="fade-right" data-aos-delay="100">
+								Experience
+							</Link>
+							<Link to={"projects"} className="footer-link" data-aos="fade-right">
+								Projects
+							</Link>
+						</article>
 					</div>
-					<article className="nav-tabs">
-						<h2 className="mt0">{t("home.contact.nav")}</h2>
-						<Link to={"about"} className="footer-link" data-aos="fade-right" data-aos-delay="200">
-							About
-						</Link>
-						<Link to={"experience"} className="footer-link" data-aos="fade-right" data-aos-delay="100">
-							Experience
-						</Link>
-						<Link to={"projects"} className="footer-link" data-aos="fade-right">
-							Projects
-						</Link>
-					</article>
 				</div>
 				<h6>&copy; 2024 Alexandru Bej. {t("home.copyright")}</h6>
 			</footer>
