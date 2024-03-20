@@ -40,6 +40,10 @@ a {
 	}
 }
 
+.active-link {
+	color: $primary-color;
+}
+
 .spaced-text {
 	line-height: 2em;
 	text-align: justify;

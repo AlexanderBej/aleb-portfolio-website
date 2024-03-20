@@ -98,7 +98,7 @@
             "description": "În calitate de dezvoltator de software, am jucat un rol esențial în crearea unui instrument intern de testare pentru codul încorporat pe microprocesoarele utilizate în componentele auto. Pluginul Eclipse, construit în principal cu Java și completat cu C++ și C#, a facilitat teste unitare, teste de instrumente funcționale și teste hardware, utilizând în principal CANoe. Responsabilitățile mele s-au extins la scrierea de teste C pentru evaluarea codului și crearea de pagini HTML pentru vizualizarea semnalului. Această experiență mi-a perfecționat abilitățile în dezvoltarea de software, metodologii de testare și colaborare într-un mediu cu ritm rapid."
         },
         "resume": {
-            "static_text": "Vezi CV-ul în întregime",
+            "static_text": "Vezi CV-ul în întregime ",
             "link": "aici"
         }
     },

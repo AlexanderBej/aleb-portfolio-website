@@ -98,7 +98,7 @@
             "description": "As a software developer, I played a pivotal role in crafting an internal testing tool for embedded code on microprocessors used in car components. The Eclipse plugin, primarily built with Java and complemented by C++ and C#, facilitated Unit tests, functional tool tests, and hardware tests, predominantly leveraging CANoe. My responsibilities extended to writing C tests for code evaluation and creating HTML pages for signal visualization. This experience honed my skills in software development, testing methodologies, and collaboration within a fast-paced environment."
         },
         "resume": {
-            "static_text": "See full resume",
+            "static_text": "See full resume ",
             "link": "here"
         }
     },

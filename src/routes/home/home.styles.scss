@@ -165,6 +165,7 @@
 	display: flex;
 	width: 100%;
 	justify-content: space-around;
+	flex-wrap: wrap;
 
 	.service-box {
 		width: 375px;
@@ -258,5 +259,89 @@ footer {
 	h6 {
 		font-size: 0.7em;
 		margin-bottom: 0;
+	}
+}
+
+
+@media screen and (max-width: 1400px) {
+	.intro-section {
+		padding: 100px 50px 0;
+	}
+
+	.dark-bkg, .contact-section, .home-section {
+		padding: 100px 50px;
+	}
+
+	footer {
+		padding: 100px 50px 10px;
+	}
+}
+
+@media screen and (max-width: 1280px) {
+	.services-container .service-box {
+		width: 300px;
+	}
+}
+
+@media screen and (max-width: 1000px) {
+	.intro-section {
+		.what-I-do {
+			width: 50%;
+		}
+
+		.titles .bkg-text {
+			font-size: 4em;
+		}
+	} 
+
+	.skills-short-container {
+		gap: 80px;
+
+		.skill-box .skill-logo {
+			height: 70px;
+		}
+	}
+
+	.projects-examples-container .proj-box {
+		height: 200px;
+	}
+
+	.services-container .service-box {
+		.service-number {
+			font-size: 2.2em;
+			top: -25px;
+		}
+
+		h2 {
+			font-size: 1.2em;
+		}
+
+		.service-icon {
+			height: 50px;
+		}
+	}
+
+	.home-section {
+		padding: 50px 0;
+	}
+}
+
+@media screen and (max-width: 750px) {
+	.intro-section {
+		.what-I-do {
+			width: 80%;
+		}
+
+		.my-name {
+			font-size: 3em;
+		}
+	} 
+
+	.projects-examples-container .proj-box {
+		height: 150px;
+	}
+
+	footer .footer-container .social-contact {
+		width: 25%;
 	}
 }

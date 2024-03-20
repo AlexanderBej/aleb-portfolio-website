@@ -4,6 +4,7 @@ import { useTranslation } from "react-i18next";
 
 import { ReactComponent as AlebLogo } from "../../assets/aleb_logo_2024_light_blue.svg";
 import ThemeSwitcher from "../../components/theme-switcher/theme-switcher.component";
+import MenuButton from "../../components/menu-button/menu-button.component";
 
 import "./nav.styles.scss";
 
@@ -41,13 +42,7 @@ const Nav = () => {
 					</button>
 
 					<ThemeSwitcher />
-					<div className="dropdown">
-						<div id="dropdown-btn" className="dropdown-btn">
-							<div className="bar bar1"></div>
-							<div className="bar bar2"></div>
-							<div className="bar bar3"></div>
-						</div>
-					</div>
+					<MenuButton />
 				</div>
 			</nav>
 			<Outlet />

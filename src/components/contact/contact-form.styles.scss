@@ -5,3 +5,15 @@
         text-align: start;
     }
 }
+
+@media screen and (max-width: 1280px) {
+	.contact-form {
+        width: 400px;
+	}
+}
+
+@media screen and (max-width: 800px) {
+    .contact-form {
+        width: 300px;
+    }
+}
