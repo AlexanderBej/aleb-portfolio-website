@@ -37,7 +37,7 @@ export const projects = [
 		text: "Thrift Tide is a comprehensive web application designed to help users manage their finances effectively using the popular 50-30-20 rule. This rule divides income into three categories: needs, wants, and savings. The app offers robust authentication features, allowing users to log in securely via email/password or Google accounts. Users can add income sources and categorize transactions into the respective columns. Additionally, the app provides a transaction history feature, enabling users to review past transactions for older months. With various statistics and insights, Financial Status Tracker empowers users to make informed financial decisions and achieve their financial goals.",
 		short:
 			"Web app implementing the 50-30-20 rule, offering authentication, transaction categorization, history, and insightful statistics for effective financial management.",
-		technologies: ["HTML", "SCSS", "React.js", "React Router", "Recharts", "Firebase", "Firestore"],
+		technologies: ["HTML", "SCSS", "React.js", "React Router", "React Redux", "Redux.js Toolkit",  "Recharts", "Firebase", "Firestore"],
 		website: "https://thrift-tide.netlify.app/",
 	},
 	{
