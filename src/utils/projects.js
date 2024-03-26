@@ -1,5 +1,46 @@
 export const projects = [
 	{
+		id: 6,
+		url: "thrift-tide",
+		name: "Thrift Tide",
+		imgs: [
+			{
+				original: "https://i.ibb.co/jRZkqQj/home.webp",
+				thumbnail: "https://i.ibb.co/jwYTyFV/home-tn.jpg",
+			},
+			{
+				original: "https://i.ibb.co/PNFXzFG/login.webp",
+				thumbnail: "https://i.ibb.co/dJjyvgg/login-tn.jpg",
+			},
+			{
+				original: "https://i.ibb.co/9hsWqTW/signup.webp",
+				thumbnail: "https://i.ibb.co/ZMMjDt0/signup-tn.jpg",
+			},
+			{
+				original: "https://i.ibb.co/LCrxhc7/dashboard.webp",
+				thumbnail: "https://i.ibb.co/z5Nz9qh/dashboard-tn.jpg",
+			},
+			{
+				original: "https://i.ibb.co/mSGfLBc/statistics.webp",
+				thumbnail: "https://i.ibb.co/vvjwcvG/statistics-tn.jpg",
+			},
+			{
+				original: "https://i.ibb.co/192VC3z/history.webp",
+				thumbnail: "https://i.ibb.co/0nhrjNV/history-tn.jpg",
+			},
+			{
+				original: "https://i.ibb.co/ByWNwYm/modal.webp",
+				thumbnail: "https://i.ibb.co/Nx1bPN4/modal-tn.jpg",
+			},
+		],
+		cover: "https://i.ibb.co/H4HG8D1/thrift-tide-cover.png",
+		text: "Thrift Tide is a comprehensive web application designed to help users manage their finances effectively using the popular 50-30-20 rule. This rule divides income into three categories: needs, wants, and savings. The app offers robust authentication features, allowing users to log in securely via email/password or Google accounts. Users can add income sources and categorize transactions into the respective columns. Additionally, the app provides a transaction history feature, enabling users to review past transactions for older months. With various statistics and insights, Financial Status Tracker empowers users to make informed financial decisions and achieve their financial goals.",
+		short:
+			"Web app implementing the 50-30-20 rule, offering authentication, transaction categorization, history, and insightful statistics for effective financial management.",
+		technologies: ["HTML", "SCSS", "React.js", "React Router", "Recharts", "Firebase", "Firestore"],
+		website: "https://thrift-tide.netlify.app/",
+	},
+	{
 		id: 5,
 		url: "mothers-birth-doula",
 		name: "Mother's Birth Doula",

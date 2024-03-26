@@ -104,6 +104,10 @@
     },
 
     "projects": {
+        "thrift-tide": {
+            "text": "Thrift Tide este o aplicație web cuprinzătoare concepută pentru a ajuta utilizatorii să-și gestioneze finanțele în mod eficient, folosind populara regulă 50-30-20. Această regulă împarte veniturile în trei categorii: nevoi, dorințe și economii. Aplicația oferă funcții de autentificare robuste, permițând utilizatorilor să se conecteze în siguranță prin e-mail/parolă sau conturi Google. Utilizatorii pot adăuga surse de venit și pot clasifica tranzacțiile în coloanele respective. În plus, aplicația oferă o funcție de istoric al tranzacțiilor, permițând utilizatorilor să revizuiască tranzacțiile anterioare pentru lunile mai vechi. Cu diverse statistici și perspective, Financial Status Tracker le permite utilizatorilor să ia decizii financiare informate și să își atingă obiectivele financiare.",
+            "short": "Aplicație web care implementează regula 50-30-20, oferind autentificare, clasificare a tranzacțiilor, istoric și statistici perspicace pentru un management financiar eficient."
+        },
         "mothers-birth-doula": {
             "text": "Mother's Birth Doula este un site web cuprinzător care se adresează viitoarelor mame din New York, oferind sprijin și servicii esențiale. Cu o paletă liniștitoare dominată de nuanțe violet deschis, interfața de utilizare, realizată în întregime de designer, oferă o ambianță senină și primitoare. Site-ul web, construit folosind React și React Router, integrează perfect funcționalități precum un formular de contact alimentat de EmailJS, asigurând o comunicare eficientă. Prin ilustrații atente și elemente de design intuitive, Mother's Birth Doula stabilește un spațiu digital reconfortant, dând putere viitoarelor mame în călătoria lor către naștere.",
             "short": "Un site web senin conceput cu nuanțe de violet deschis, oferind sprijin viitoarelor mame din New York. Construit cu integrarea React și EmailJS."

@@ -104,6 +104,10 @@
     },
 
     "projects": {
+        "thrift-tide": {
+            "text": "Thrift Tide is a comprehensive web application designed to help users manage their finances effectively using the popular 50-30-20 rule. This rule divides income into three categories: needs, wants, and savings. The app offers robust authentication features, allowing users to log in securely via email/password or Google accounts. Users can add income sources and categorize transactions into the respective columns. Additionally, the app provides a transaction history feature, enabling users to review past transactions for older months. With various statistics and insights, Financial Status Tracker empowers users to make informed financial decisions and achieve their financial goals.",
+            "short": "Web app implementing the 50-30-20 rule, offering authentication, transaction categorization, history, and insightful statistics for effective financial management."
+        },
         "mothers-birth-doula": {
             "text": "Mother's Birth Doula is a comprehensive website catering to soon-to-be mothers in New York, offering essential support and services. With a soothing palette dominated by light purple hues, the UI, crafted entirely by the designer, provides a serene and welcoming ambiance. The website, built using React and React Router, seamlessly integrates functionalities such as a contact form powered by EmailJS, ensuring efficient communication. Through thoughtful illustrations and intuitive design elements, Mother's Birth Doula establishes a comforting digital space, empowering expectant mothers in their journey towards childbirth.",
             "short": "A serene website designed with light purple hues, offering support for soon-to-be mothers in New York. Built with React and EmailJS integration."
